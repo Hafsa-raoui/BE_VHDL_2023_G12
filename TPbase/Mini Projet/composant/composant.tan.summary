@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.626 ns
+From           : C
+To             : compteur3bcd:compteur3bcd0|iq[3]
+From Clock     : --
+To Clock       : clk_50M
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.310 ns
+From           : compteur3bcd:compteur3bcd0|iq[2]
+To             : S_u[2]
+From Clock     : clk_50M
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.639 ns
+From           : data[3]
+To             : compteur3bcd:compteur3bcd0|iq[3]
+From Clock     : --
+To Clock       : clk_50M
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk_50M'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 197.82 MHz ( period = 5.055 ns )
+From           : DivFreq:DivFreq0|compteur[0]
+To             : DivFreq:DivFreq0|compteur[31]
+From Clock     : clk_50M
+To Clock       : clk_50M
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

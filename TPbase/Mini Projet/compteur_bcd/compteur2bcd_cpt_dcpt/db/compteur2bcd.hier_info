@@ -1,0 +1,23 @@
+|compteur2bcd
+H => cpt_value[3].CLK
+H => cpt_value[2].CLK
+H => cpt_value[1].CLK
+H => cpt_value[0].CLK
+C => cpt_value[3]~7.OUTPUTSELECT
+C => cpt_value[2]~6.OUTPUTSELECT
+C => cpt_value[1]~5.OUTPUTSELECT
+C => cpt_value[0]~0.OUTPUTSELECT
+C => cpt_value[3]~2.OUTPUTSELECT
+C => cpt_value[2]~3.OUTPUTSELECT
+C => cpt_value[1]~4.OUTPUTSELECT
+C => cpt_value[0]~1.OUTPUTSELECT
+reset => cpt_value[3].ACLR
+reset => cpt_value[2].ACLR
+reset => cpt_value[1].ACLR
+reset => cpt_value[0].ACLR
+S[0] <= cpt_value[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= cpt_value[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= cpt_value[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= cpt_value[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

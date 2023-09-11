@@ -1,0 +1,174 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+be_tp
+# storage
+db|composant.(0).cnf
+db|composant.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+be_tp.vhd
+a7cf858511b1a3806632f7420ea5e6
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+..|..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+DivFreq
+# storage
+db|composant.(1).cnf
+db|composant.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|Div_Freq|divfreq.vhd
+97bcf63d7790fc8942dc502655bebe2a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+DivFreq:DivFreq0
+}
+# lmf
+..|..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+compteur3bcd
+# storage
+db|composant.(2).cnf
+db|composant.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|compteur_bcd|compteur3bcd_cpt_dcpt_load|compteur3bcd.vhd
+afcdfb9a3aadd5961eed87fb79c1c9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+compteur3bcd:compteur3bcd0
+}
+# lmf
+..|..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+deco7seg
+# storage
+db|composant.(3).cnf
+db|composant.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|deco7seg|deco7seg.vhd
+50f88c8616c87ce7f0e673b34ed5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(e)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(seg_u)
+6 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+deco7seg:deco7seg0
+}
+# lmf
+..|..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# complete
+

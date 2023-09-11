@@ -1,0 +1,34 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity deco7seg is 
+port(--en : in std_logic;
+	E 	: in std_logic_vector(3 downto 0);
+	
+	seg : out std_logic_vector(6 downto 0)
+	);
+end deco7seg;
+
+architecture arch of deco7seg is 
+
+
+begin 
+
+	-- i <= en & E
+	--with i select
+		seg <=  "0000001" when E  = "0000" else
+				"1001111" when E  = "0001" else
+				"0010010" when E  = "0010" else
+				"0000110" when E  = "0011" else
+				"1001100" when E  = "0100" else
+				"0100100" when E  = "0101" else
+				"1100000" when E  = "0110" else
+				"0001111" when E  = "0111" else
+				"0000000" when E  = "1000" else
+				"0001100" when E  = "1001" else
+				"1111111";
+				
+	end arch; 
+		
+		

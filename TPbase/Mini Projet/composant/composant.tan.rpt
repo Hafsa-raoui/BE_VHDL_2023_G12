@@ -1,0 +1,540 @@
+Classic Timing Analyzer report for composant
+Mon Sep 11 19:05:46 2023
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk_50M'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                              ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------+----------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                             ; To                               ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------+----------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 2.626 ns                         ; C                                ; compteur3bcd:compteur3bcd0|iq[3] ; --         ; clk_50M  ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 12.310 ns                        ; compteur3bcd:compteur3bcd0|iq[2] ; S_u[2]                           ; clk_50M    ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 3.639 ns                         ; data[3]                          ; compteur3bcd:compteur3bcd0|iq[3] ; --         ; clk_50M  ; 0            ;
+; Clock Setup: 'clk_50M'       ; N/A   ; None          ; 197.82 MHz ( period = 5.055 ns ) ; DivFreq:DivFreq0|compteur[0]     ; DivFreq:DivFreq0|compteur[31]    ; clk_50M    ; clk_50M  ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                  ;                                  ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------+----------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk_50M         ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk_50M'                                                                                                                                                                                                                                                    ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------+-------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                          ; To                            ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------+-------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 197.82 MHz ( period = 5.055 ns )                    ; DivFreq:DivFreq0|compteur[0]  ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.836 ns                ;
+; N/A                                     ; 199.20 MHz ( period = 5.020 ns )                    ; DivFreq:DivFreq0|compteur[1]  ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.801 ns                ;
+; N/A                                     ; 199.28 MHz ( period = 5.018 ns )                    ; DivFreq:DivFreq0|compteur[4]  ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.815 ns                ;
+; N/A                                     ; 201.33 MHz ( period = 4.967 ns )                    ; DivFreq:DivFreq0|compteur[0]  ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.748 ns                ;
+; N/A                                     ; 202.10 MHz ( period = 4.948 ns )                    ; DivFreq:DivFreq0|compteur[2]  ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.729 ns                ;
+; N/A                                     ; 202.76 MHz ( period = 4.932 ns )                    ; DivFreq:DivFreq0|compteur[1]  ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.713 ns                ;
+; N/A                                     ; 202.84 MHz ( period = 4.930 ns )                    ; DivFreq:DivFreq0|compteur[4]  ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.727 ns                ;
+; N/A                                     ; 204.16 MHz ( period = 4.898 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.693 ns                ;
+; N/A                                     ; 204.21 MHz ( period = 4.897 ns )                    ; DivFreq:DivFreq0|compteur[0]  ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.678 ns                ;
+; N/A                                     ; 205.09 MHz ( period = 4.876 ns )                    ; DivFreq:DivFreq0|compteur[3]  ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.657 ns                ;
+; N/A                                     ; 205.34 MHz ( period = 4.870 ns )                    ; DivFreq:DivFreq0|compteur[6]  ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.665 ns                ;
+; N/A                                     ; 205.68 MHz ( period = 4.862 ns )                    ; DivFreq:DivFreq0|compteur[1]  ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.643 ns                ;
+; N/A                                     ; 205.76 MHz ( period = 4.860 ns )                    ; DivFreq:DivFreq0|compteur[4]  ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.657 ns                ;
+; N/A                                     ; 205.76 MHz ( period = 4.860 ns )                    ; DivFreq:DivFreq0|compteur[2]  ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.641 ns                ;
+; N/A                                     ; 207.21 MHz ( period = 4.826 ns )                    ; DivFreq:DivFreq0|compteur[0]  ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.607 ns                ;
+; N/A                                     ; 207.90 MHz ( period = 4.810 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.605 ns                ;
+; N/A                                     ; 208.72 MHz ( period = 4.791 ns )                    ; DivFreq:DivFreq0|compteur[1]  ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.572 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; DivFreq:DivFreq0|compteur[2]  ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.571 ns                ;
+; N/A                                     ; 208.81 MHz ( period = 4.789 ns )                    ; DivFreq:DivFreq0|compteur[4]  ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.586 ns                ;
+; N/A                                     ; 208.86 MHz ( period = 4.788 ns )                    ; DivFreq:DivFreq0|compteur[3]  ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.569 ns                ;
+; N/A                                     ; 209.12 MHz ( period = 4.782 ns )                    ; DivFreq:DivFreq0|compteur[6]  ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.577 ns                ;
+; N/A                                     ; 209.91 MHz ( period = 4.764 ns )                    ; DivFreq:DivFreq0|compteur[5]  ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.545 ns                ;
+; N/A                                     ; 210.48 MHz ( period = 4.751 ns )                    ; DivFreq:DivFreq0|compteur[0]  ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.532 ns                ;
+; N/A                                     ; 210.97 MHz ( period = 4.740 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.535 ns                ;
+; N/A                                     ; 211.15 MHz ( period = 4.736 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 211.91 MHz ( period = 4.719 ns )                    ; DivFreq:DivFreq0|compteur[2]  ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 211.95 MHz ( period = 4.718 ns )                    ; DivFreq:DivFreq0|compteur[3]  ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.499 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; DivFreq:DivFreq0|compteur[1]  ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.497 ns                ;
+; N/A                                     ; 212.13 MHz ( period = 4.714 ns )                    ; DivFreq:DivFreq0|compteur[4]  ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.511 ns                ;
+; N/A                                     ; 212.22 MHz ( period = 4.712 ns )                    ; DivFreq:DivFreq0|compteur[6]  ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.507 ns                ;
+; N/A                                     ; 213.86 MHz ( period = 4.676 ns )                    ; DivFreq:DivFreq0|compteur[5]  ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.457 ns                ;
+; N/A                                     ; 214.18 MHz ( period = 4.669 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 215.15 MHz ( period = 4.648 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.443 ns                ;
+; N/A                                     ; 215.19 MHz ( period = 4.647 ns )                    ; DivFreq:DivFreq0|compteur[3]  ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.428 ns                ;
+; N/A                                     ; 215.33 MHz ( period = 4.644 ns )                    ; DivFreq:DivFreq0|compteur[2]  ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.425 ns                ;
+; N/A                                     ; 215.47 MHz ( period = 4.641 ns )                    ; DivFreq:DivFreq0|compteur[6]  ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.436 ns                ;
+; N/A                                     ; 217.11 MHz ( period = 4.606 ns )                    ; DivFreq:DivFreq0|compteur[5]  ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.387 ns                ;
+; N/A                                     ; 217.68 MHz ( period = 4.594 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.389 ns                ;
+; N/A                                     ; 218.44 MHz ( period = 4.578 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.373 ns                ;
+; N/A                                     ; 218.72 MHz ( period = 4.572 ns )                    ; DivFreq:DivFreq0|compteur[3]  ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.353 ns                ;
+; N/A                                     ; 219.01 MHz ( period = 4.566 ns )                    ; DivFreq:DivFreq0|compteur[6]  ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.361 ns                ;
+; N/A                                     ; 220.51 MHz ( period = 4.535 ns )                    ; DivFreq:DivFreq0|compteur[5]  ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.316 ns                ;
+; N/A                                     ; 221.88 MHz ( period = 4.507 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.302 ns                ;
+; N/A                                     ; 224.22 MHz ( period = 4.460 ns )                    ; DivFreq:DivFreq0|compteur[5]  ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.241 ns                ;
+; N/A                                     ; 225.63 MHz ( period = 4.432 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.227 ns                ;
+; N/A                                     ; 230.10 MHz ( period = 4.346 ns )                    ; DivFreq:DivFreq0|compteur[9]  ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.132 ns                ;
+; N/A                                     ; 232.72 MHz ( period = 4.297 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.083 ns                ;
+; N/A                                     ; 234.25 MHz ( period = 4.269 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.050 ns                ;
+; N/A                                     ; 234.85 MHz ( period = 4.258 ns )                    ; DivFreq:DivFreq0|compteur[9]  ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 4.044 ns                ;
+; N/A                                     ; 237.59 MHz ( period = 4.209 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.995 ns                ;
+; N/A                                     ; 238.32 MHz ( period = 4.196 ns )                    ; DivFreq:DivFreq0|compteur[15] ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.977 ns                ;
+; N/A                                     ; 238.38 MHz ( period = 4.195 ns )                    ; DivFreq:DivFreq0|compteur[12] ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.976 ns                ;
+; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; DivFreq:DivFreq0|compteur[0]  ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.963 ns                ;
+; N/A                                     ; 238.78 MHz ( period = 4.188 ns )                    ; DivFreq:DivFreq0|compteur[9]  ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.974 ns                ;
+; N/A                                     ; 239.18 MHz ( period = 4.181 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.962 ns                ;
+; N/A                                     ; 239.69 MHz ( period = 4.172 ns )                    ; DivFreq:DivFreq0|compteur[0]  ; DivFreq:DivFreq0|compteur[24] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.944 ns                ;
+; N/A                                     ; 240.62 MHz ( period = 4.156 ns )                    ; DivFreq:DivFreq0|compteur[1]  ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.928 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; DivFreq:DivFreq0|compteur[4]  ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.942 ns                ;
+; N/A                                     ; 241.60 MHz ( period = 4.139 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 241.72 MHz ( period = 4.137 ns )                    ; DivFreq:DivFreq0|compteur[1]  ; DivFreq:DivFreq0|compteur[24] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.909 ns                ;
+; N/A                                     ; 241.84 MHz ( period = 4.135 ns )                    ; DivFreq:DivFreq0|compteur[4]  ; DivFreq:DivFreq0|compteur[24] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.923 ns                ;
+; N/A                                     ; 242.01 MHz ( period = 4.132 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[6]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.909 ns                ;
+; N/A                                     ; 242.07 MHz ( period = 4.131 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.908 ns                ;
+; N/A                                     ; 242.13 MHz ( period = 4.130 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[8]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.907 ns                ;
+; N/A                                     ; 242.54 MHz ( period = 4.123 ns )                    ; DivFreq:DivFreq0|compteur[0]  ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.895 ns                ;
+; N/A                                     ; 242.54 MHz ( period = 4.123 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.900 ns                ;
+; N/A                                     ; 242.60 MHz ( period = 4.122 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[19] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.899 ns                ;
+; N/A                                     ; 242.90 MHz ( period = 4.117 ns )                    ; DivFreq:DivFreq0|compteur[9]  ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.903 ns                ;
+; N/A                                     ; 243.25 MHz ( period = 4.111 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.892 ns                ;
+; N/A                                     ; 243.43 MHz ( period = 4.108 ns )                    ; DivFreq:DivFreq0|compteur[15] ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 243.49 MHz ( period = 4.107 ns )                    ; DivFreq:DivFreq0|compteur[12] ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.888 ns                ;
+; N/A                                     ; 244.50 MHz ( period = 4.090 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[6]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.876 ns                ;
+; N/A                                     ; 244.56 MHz ( period = 4.089 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.875 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; DivFreq:DivFreq0|compteur[1]  ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.860 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[8]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.874 ns                ;
+; N/A                                     ; 244.74 MHz ( period = 4.086 ns )                    ; DivFreq:DivFreq0|compteur[4]  ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.874 ns                ;
+; N/A                                     ; 244.86 MHz ( period = 4.084 ns )                    ; DivFreq:DivFreq0|compteur[2]  ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.856 ns                ;
+; N/A                                     ; 245.04 MHz ( period = 4.081 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.867 ns                ;
+; N/A                                     ; 245.10 MHz ( period = 4.080 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[19] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.866 ns                ;
+; N/A                                     ; 245.46 MHz ( period = 4.074 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[1]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.865 ns                ;
+; N/A                                     ; 245.58 MHz ( period = 4.072 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[5]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.863 ns                ;
+; N/A                                     ; 245.82 MHz ( period = 4.068 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 246.00 MHz ( period = 4.065 ns )                    ; DivFreq:DivFreq0|compteur[2]  ; DivFreq:DivFreq0|compteur[24] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.837 ns                ;
+; N/A                                     ; 246.61 MHz ( period = 4.055 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[12] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.846 ns                ;
+; N/A                                     ; 246.67 MHz ( period = 4.054 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[6]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.840 ns                ;
+; N/A                                     ; 246.67 MHz ( period = 4.054 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[11] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.845 ns                ;
+; N/A                                     ; 246.73 MHz ( period = 4.053 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.839 ns                ;
+; N/A                                     ; 246.79 MHz ( period = 4.052 ns )                    ; DivFreq:DivFreq0|compteur[13] ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.833 ns                ;
+; N/A                                     ; 246.79 MHz ( period = 4.052 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[8]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.838 ns                ;
+; N/A                                     ; 246.97 MHz ( period = 4.049 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[13] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.840 ns                ;
+; N/A                                     ; 247.10 MHz ( period = 4.047 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[6]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.819 ns                ;
+; N/A                                     ; 247.16 MHz ( period = 4.046 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.818 ns                ;
+; N/A                                     ; 247.22 MHz ( period = 4.045 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.831 ns                ;
+; N/A                                     ; 247.22 MHz ( period = 4.045 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[8]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.817 ns                ;
+; N/A                                     ; 247.28 MHz ( period = 4.044 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[19] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.830 ns                ;
+; N/A                                     ; 247.40 MHz ( period = 4.042 ns )                    ; DivFreq:DivFreq0|compteur[9]  ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.828 ns                ;
+; N/A                                     ; 247.46 MHz ( period = 4.041 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[14] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.832 ns                ;
+; N/A                                     ; 247.52 MHz ( period = 4.040 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.821 ns                ;
+; N/A                                     ; 247.65 MHz ( period = 4.038 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.810 ns                ;
+; N/A                                     ; 247.65 MHz ( period = 4.038 ns )                    ; DivFreq:DivFreq0|compteur[15] ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.819 ns                ;
+; N/A                                     ; 247.71 MHz ( period = 4.037 ns )                    ; DivFreq:DivFreq0|compteur[12] ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.818 ns                ;
+; N/A                                     ; 247.71 MHz ( period = 4.037 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[19] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.809 ns                ;
+; N/A                                     ; 248.02 MHz ( period = 4.032 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[1]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.832 ns                ;
+; N/A                                     ; 248.14 MHz ( period = 4.030 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[5]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.830 ns                ;
+; N/A                                     ; 248.88 MHz ( period = 4.018 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.799 ns                ;
+; N/A                                     ; 249.00 MHz ( period = 4.016 ns )                    ; DivFreq:DivFreq0|compteur[2]  ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.788 ns                ;
+; N/A                                     ; 249.07 MHz ( period = 4.015 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[24] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.801 ns                ;
+; N/A                                     ; 249.19 MHz ( period = 4.013 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[12] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.813 ns                ;
+; N/A                                     ; 249.25 MHz ( period = 4.012 ns )                    ; DivFreq:DivFreq0|compteur[3]  ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.784 ns                ;
+; N/A                                     ; 249.25 MHz ( period = 4.012 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[11] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.812 ns                ;
+; N/A                                     ; 249.56 MHz ( period = 4.007 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[13] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.807 ns                ;
+; N/A                                     ; 249.63 MHz ( period = 4.006 ns )                    ; DivFreq:DivFreq0|compteur[6]  ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.792 ns                ;
+; N/A                                     ; 250.06 MHz ( period = 3.999 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[14] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.799 ns                ;
+; N/A                                     ; 250.25 MHz ( period = 3.996 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[1]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.796 ns                ;
+; N/A                                     ; 250.38 MHz ( period = 3.994 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[5]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.794 ns                ;
+; N/A                                     ; 250.44 MHz ( period = 3.993 ns )                    ; DivFreq:DivFreq0|compteur[3]  ; DivFreq:DivFreq0|compteur[24] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.765 ns                ;
+; N/A                                     ; 250.44 MHz ( period = 3.993 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.779 ns                ;
+; N/A                                     ; 250.69 MHz ( period = 3.989 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[1]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.775 ns                ;
+; N/A                                     ; 250.82 MHz ( period = 3.987 ns )                    ; DivFreq:DivFreq0|compteur[6]  ; DivFreq:DivFreq0|compteur[24] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.773 ns                ;
+; N/A                                     ; 250.82 MHz ( period = 3.987 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[5]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.773 ns                ;
+; N/A                                     ; 251.45 MHz ( period = 3.977 ns )                    ; DivFreq:DivFreq0|compteur[0]  ; DivFreq:DivFreq0|compteur[23] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.749 ns                ;
+; N/A                                     ; 251.45 MHz ( period = 3.977 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[12] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.777 ns                ;
+; N/A                                     ; 251.51 MHz ( period = 3.976 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[11] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.776 ns                ;
+; N/A                                     ; 251.83 MHz ( period = 3.971 ns )                    ; DivFreq:DivFreq0|compteur[18] ; DivFreq:DivFreq0|compteur[31] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.752 ns                ;
+; N/A                                     ; 251.83 MHz ( period = 3.971 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[13] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.771 ns                ;
+; N/A                                     ; 251.89 MHz ( period = 3.970 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[12] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.756 ns                ;
+; N/A                                     ; 251.95 MHz ( period = 3.969 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[11] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.755 ns                ;
+; N/A                                     ; 252.08 MHz ( period = 3.967 ns )                    ; DivFreq:DivFreq0|compteur[15] ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.748 ns                ;
+; N/A                                     ; 252.14 MHz ( period = 3.966 ns )                    ; DivFreq:DivFreq0|compteur[12] ; DivFreq:DivFreq0|compteur[28] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.747 ns                ;
+; N/A                                     ; 252.21 MHz ( period = 3.965 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.746 ns                ;
+; N/A                                     ; 252.27 MHz ( period = 3.964 ns )                    ; DivFreq:DivFreq0|compteur[13] ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.745 ns                ;
+; N/A                                     ; 252.27 MHz ( period = 3.964 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[13] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.750 ns                ;
+; N/A                                     ; 252.33 MHz ( period = 3.963 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[14] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.763 ns                ;
+; N/A                                     ; 252.78 MHz ( period = 3.956 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[14] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.742 ns                ;
+; N/A                                     ; 253.55 MHz ( period = 3.944 ns )                    ; DivFreq:DivFreq0|compteur[3]  ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.716 ns                ;
+; N/A                                     ; 253.61 MHz ( period = 3.943 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[6]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.715 ns                ;
+; N/A                                     ; 253.68 MHz ( period = 3.942 ns )                    ; DivFreq:DivFreq0|compteur[1]  ; DivFreq:DivFreq0|compteur[23] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.714 ns                ;
+; N/A                                     ; 253.68 MHz ( period = 3.942 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.714 ns                ;
+; N/A                                     ; 253.74 MHz ( period = 3.941 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[8]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.713 ns                ;
+; N/A                                     ; 253.81 MHz ( period = 3.940 ns )                    ; DivFreq:DivFreq0|compteur[4]  ; DivFreq:DivFreq0|compteur[23] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.728 ns                ;
+; N/A                                     ; 253.81 MHz ( period = 3.940 ns )                    ; DivFreq:DivFreq0|compteur[0]  ; DivFreq:DivFreq0|compteur[22] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.712 ns                ;
+; N/A                                     ; 253.94 MHz ( period = 3.938 ns )                    ; DivFreq:DivFreq0|compteur[6]  ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.724 ns                ;
+; N/A                                     ; 254.19 MHz ( period = 3.934 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.706 ns                ;
+; N/A                                     ; 254.26 MHz ( period = 3.933 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[19] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.705 ns                ;
+; N/A                                     ; 254.45 MHz ( period = 3.930 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.711 ns                ;
+; N/A                                     ; 254.91 MHz ( period = 3.923 ns )                    ; DivFreq:DivFreq0|compteur[0]  ; DivFreq:DivFreq0|compteur[18] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.709 ns                ;
+; N/A                                     ; 255.56 MHz ( period = 3.913 ns )                    ; DivFreq:DivFreq0|compteur[17] ; DivFreq:DivFreq0|compteur[6]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.699 ns                ;
+; N/A                                     ; 255.62 MHz ( period = 3.912 ns )                    ; DivFreq:DivFreq0|compteur[17] ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.698 ns                ;
+; N/A                                     ; 255.69 MHz ( period = 3.911 ns )                    ; DivFreq:DivFreq0|compteur[17] ; DivFreq:DivFreq0|compteur[8]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.697 ns                ;
+; N/A                                     ; 256.08 MHz ( period = 3.905 ns )                    ; DivFreq:DivFreq0|compteur[1]  ; DivFreq:DivFreq0|compteur[22] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.677 ns                ;
+; N/A                                     ; 256.15 MHz ( period = 3.904 ns )                    ; DivFreq:DivFreq0|compteur[17] ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.690 ns                ;
+; N/A                                     ; 256.21 MHz ( period = 3.903 ns )                    ; DivFreq:DivFreq0|compteur[4]  ; DivFreq:DivFreq0|compteur[22] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.691 ns                ;
+; N/A                                     ; 256.21 MHz ( period = 3.903 ns )                    ; DivFreq:DivFreq0|compteur[17] ; DivFreq:DivFreq0|compteur[19] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.689 ns                ;
+; N/A                                     ; 256.41 MHz ( period = 3.900 ns )                    ; DivFreq:DivFreq0|compteur[5]  ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.672 ns                ;
+; N/A                                     ; 256.41 MHz ( period = 3.900 ns )                    ; DivFreq:DivFreq0|compteur[9]  ; DivFreq:DivFreq0|compteur[6]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.677 ns                ;
+; N/A                                     ; 256.48 MHz ( period = 3.899 ns )                    ; DivFreq:DivFreq0|compteur[9]  ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.676 ns                ;
+; N/A                                     ; 256.54 MHz ( period = 3.898 ns )                    ; DivFreq:DivFreq0|compteur[9]  ; DivFreq:DivFreq0|compteur[8]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.675 ns                ;
+; N/A                                     ; 256.81 MHz ( period = 3.894 ns )                    ; DivFreq:DivFreq0|compteur[13] ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.675 ns                ;
+; N/A                                     ; 256.94 MHz ( period = 3.892 ns )                    ; DivFreq:DivFreq0|compteur[15] ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.673 ns                ;
+; N/A                                     ; 257.00 MHz ( period = 3.891 ns )                    ; DivFreq:DivFreq0|compteur[9]  ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.668 ns                ;
+; N/A                                     ; 257.00 MHz ( period = 3.891 ns )                    ; DivFreq:DivFreq0|compteur[12] ; DivFreq:DivFreq0|compteur[27] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.672 ns                ;
+; N/A                                     ; 257.07 MHz ( period = 3.890 ns )                    ; DivFreq:DivFreq0|compteur[9]  ; DivFreq:DivFreq0|compteur[19] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.667 ns                ;
+; N/A                                     ; 257.20 MHz ( period = 3.888 ns )                    ; DivFreq:DivFreq0|compteur[1]  ; DivFreq:DivFreq0|compteur[18] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.674 ns                ;
+; N/A                                     ; 257.33 MHz ( period = 3.886 ns )                    ; DivFreq:DivFreq0|compteur[4]  ; DivFreq:DivFreq0|compteur[18] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.688 ns                ;
+; N/A                                     ; 257.40 MHz ( period = 3.885 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[20] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.662 ns                ;
+; N/A                                     ; 257.40 MHz ( period = 3.885 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[22] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.662 ns                ;
+; N/A                                     ; 257.40 MHz ( period = 3.885 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[1]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.671 ns                ;
+; N/A                                     ; 257.47 MHz ( period = 3.884 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[21] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.661 ns                ;
+; N/A                                     ; 257.53 MHz ( period = 3.883 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[23] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.660 ns                ;
+; N/A                                     ; 257.53 MHz ( period = 3.883 ns )                    ; DivFreq:DivFreq0|compteur[18] ; DivFreq:DivFreq0|compteur[30] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.664 ns                ;
+; N/A                                     ; 257.53 MHz ( period = 3.883 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[5]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.669 ns                ;
+; N/A                                     ; 257.67 MHz ( period = 3.881 ns )                    ; DivFreq:DivFreq0|compteur[5]  ; DivFreq:DivFreq0|compteur[24] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.653 ns                ;
+; N/A                                     ; 257.73 MHz ( period = 3.880 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[17] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.657 ns                ;
+; N/A                                     ; 257.80 MHz ( period = 3.879 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[16] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.656 ns                ;
+; N/A                                     ; 257.86 MHz ( period = 3.878 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[7]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.655 ns                ;
+; N/A                                     ; 257.93 MHz ( period = 3.877 ns )                    ; DivFreq:DivFreq0|compteur[10] ; DivFreq:DivFreq0|compteur[24] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.654 ns                ;
+; N/A                                     ; 258.06 MHz ( period = 3.875 ns )                    ; DivFreq:DivFreq0|compteur[0]  ; DivFreq:DivFreq0|compteur[21] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.647 ns                ;
+; N/A                                     ; 258.40 MHz ( period = 3.870 ns )                    ; DivFreq:DivFreq0|compteur[2]  ; DivFreq:DivFreq0|compteur[23] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.642 ns                ;
+; N/A                                     ; 258.67 MHz ( period = 3.866 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[12] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.652 ns                ;
+; N/A                                     ; 258.73 MHz ( period = 3.865 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[11] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.651 ns                ;
+; N/A                                     ; 259.07 MHz ( period = 3.860 ns )                    ; DivFreq:DivFreq0|compteur[14] ; DivFreq:DivFreq0|compteur[29] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.641 ns                ;
+; N/A                                     ; 259.07 MHz ( period = 3.860 ns )                    ; DivFreq:DivFreq0|compteur[21] ; DivFreq:DivFreq0|compteur[6]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 259.07 MHz ( period = 3.860 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[13] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 259.13 MHz ( period = 3.859 ns )                    ; DivFreq:DivFreq0|compteur[21] ; DivFreq:DivFreq0|compteur[25] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.645 ns                ;
+; N/A                                     ; 259.20 MHz ( period = 3.858 ns )                    ; DivFreq:DivFreq0|compteur[21] ; DivFreq:DivFreq0|compteur[8]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.644 ns                ;
+; N/A                                     ; 259.40 MHz ( period = 3.855 ns )                    ; DivFreq:DivFreq0|compteur[17] ; DivFreq:DivFreq0|compteur[1]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.655 ns                ;
+; N/A                                     ; 259.54 MHz ( period = 3.853 ns )                    ; DivFreq:DivFreq0|compteur[8]  ; DivFreq:DivFreq0|compteur[24] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.639 ns                ;
+; N/A                                     ; 259.54 MHz ( period = 3.853 ns )                    ; DivFreq:DivFreq0|compteur[17] ; DivFreq:DivFreq0|compteur[5]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.653 ns                ;
+; N/A                                     ; 259.61 MHz ( period = 3.852 ns )                    ; DivFreq:DivFreq0|compteur[11] ; DivFreq:DivFreq0|compteur[14] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.638 ns                ;
+; N/A                                     ; 259.67 MHz ( period = 3.851 ns )                    ; DivFreq:DivFreq0|compteur[21] ; DivFreq:DivFreq0|compteur[26] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.637 ns                ;
+; N/A                                     ; 259.74 MHz ( period = 3.850 ns )                    ; DivFreq:DivFreq0|compteur[21] ; DivFreq:DivFreq0|compteur[19] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.636 ns                ;
+; N/A                                     ; 260.21 MHz ( period = 3.843 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[20] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.629 ns                ;
+; N/A                                     ; 260.21 MHz ( period = 3.843 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[22] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.629 ns                ;
+; N/A                                     ; 260.28 MHz ( period = 3.842 ns )                    ; DivFreq:DivFreq0|compteur[0]  ; DivFreq:DivFreq0|compteur[17] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.614 ns                ;
+; N/A                                     ; 260.28 MHz ( period = 3.842 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[21] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.628 ns                ;
+; N/A                                     ; 260.28 MHz ( period = 3.842 ns )                    ; DivFreq:DivFreq0|compteur[9]  ; DivFreq:DivFreq0|compteur[1]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.633 ns                ;
+; N/A                                     ; 260.35 MHz ( period = 3.841 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[23] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.627 ns                ;
+; N/A                                     ; 260.42 MHz ( period = 3.840 ns )                    ; DivFreq:DivFreq0|compteur[1]  ; DivFreq:DivFreq0|compteur[21] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.612 ns                ;
+; N/A                                     ; 260.42 MHz ( period = 3.840 ns )                    ; DivFreq:DivFreq0|compteur[9]  ; DivFreq:DivFreq0|compteur[5]  ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.631 ns                ;
+; N/A                                     ; 260.55 MHz ( period = 3.838 ns )                    ; DivFreq:DivFreq0|compteur[7]  ; DivFreq:DivFreq0|compteur[17] ; clk_50M    ; clk_50M  ; None                        ; None                      ; 3.624 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                               ;                               ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------+-------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; tsu                                                                                       ;
++-------+--------------+------------+---------+----------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From    ; To                               ; To Clock ;
++-------+--------------+------------+---------+----------------------------------+----------+
+; N/A   ; None         ; 2.626 ns   ; C       ; compteur3bcd:compteur3bcd0|iq[3] ; clk_50M  ;
+; N/A   ; None         ; 2.624 ns   ; C       ; compteur3bcd:compteur3bcd0|iq[1] ; clk_50M  ;
+; N/A   ; None         ; 2.556 ns   ; C       ; compteur3bcd:compteur3bcd0|iq[2] ; clk_50M  ;
+; N/A   ; None         ; 1.865 ns   ; load    ; compteur3bcd:compteur3bcd0|iq[3] ; clk_50M  ;
+; N/A   ; None         ; 1.788 ns   ; C       ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
+; N/A   ; None         ; 1.504 ns   ; load    ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
+; N/A   ; None         ; 1.504 ns   ; load    ; compteur3bcd:compteur3bcd0|iq[1] ; clk_50M  ;
+; N/A   ; None         ; 1.332 ns   ; load    ; compteur3bcd:compteur3bcd0|iq[2] ; clk_50M  ;
+; N/A   ; None         ; 1.016 ns   ; reset   ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
+; N/A   ; None         ; 1.016 ns   ; reset   ; compteur3bcd:compteur3bcd0|iq[1] ; clk_50M  ;
+; N/A   ; None         ; 1.016 ns   ; reset   ; compteur3bcd:compteur3bcd0|iq[2] ; clk_50M  ;
+; N/A   ; None         ; 1.016 ns   ; reset   ; compteur3bcd:compteur3bcd0|iq[3] ; clk_50M  ;
+; N/A   ; None         ; -1.870 ns  ; data[1] ; compteur3bcd:compteur3bcd0|iq[3] ; clk_50M  ;
+; N/A   ; None         ; -2.231 ns  ; data[1] ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
+; N/A   ; None         ; -2.231 ns  ; data[1] ; compteur3bcd:compteur3bcd0|iq[1] ; clk_50M  ;
+; N/A   ; None         ; -2.291 ns  ; data[2] ; compteur3bcd:compteur3bcd0|iq[3] ; clk_50M  ;
+; N/A   ; None         ; -2.403 ns  ; data[1] ; compteur3bcd:compteur3bcd0|iq[2] ; clk_50M  ;
+; N/A   ; None         ; -2.652 ns  ; data[2] ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
+; N/A   ; None         ; -2.652 ns  ; data[2] ; compteur3bcd:compteur3bcd0|iq[1] ; clk_50M  ;
+; N/A   ; None         ; -2.766 ns  ; data[0] ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
+; N/A   ; None         ; -2.824 ns  ; data[2] ; compteur3bcd:compteur3bcd0|iq[2] ; clk_50M  ;
+; N/A   ; None         ; -2.838 ns  ; data[3] ; compteur3bcd:compteur3bcd0|iq[3] ; clk_50M  ;
+; N/A   ; None         ; -3.199 ns  ; data[3] ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
+; N/A   ; None         ; -3.199 ns  ; data[3] ; compteur3bcd:compteur3bcd0|iq[1] ; clk_50M  ;
+; N/A   ; None         ; -3.371 ns  ; data[3] ; compteur3bcd:compteur3bcd0|iq[2] ; clk_50M  ;
++-------+--------------+------------+---------+----------------------------------+----------+
+
+
++--------------------------------------------------------------------------------------------+
+; tco                                                                                        ;
++-------+--------------+------------+----------------------------------+--------+------------+
+; Slack ; Required tco ; Actual tco ; From                             ; To     ; From Clock ;
++-------+--------------+------------+----------------------------------+--------+------------+
+; N/A   ; None         ; 12.310 ns  ; compteur3bcd:compteur3bcd0|iq[2] ; S_u[2] ; clk_50M    ;
+; N/A   ; None         ; 12.297 ns  ; compteur3bcd:compteur3bcd0|iq[2] ; S_u[3] ; clk_50M    ;
+; N/A   ; None         ; 12.290 ns  ; compteur3bcd:compteur3bcd0|iq[2] ; S_u[1] ; clk_50M    ;
+; N/A   ; None         ; 12.270 ns  ; compteur3bcd:compteur3bcd0|iq[2] ; S_u[0] ; clk_50M    ;
+; N/A   ; None         ; 12.053 ns  ; compteur3bcd:compteur3bcd0|iq[2] ; S_u[6] ; clk_50M    ;
+; N/A   ; None         ; 12.011 ns  ; compteur3bcd:compteur3bcd0|iq[2] ; S_u[5] ; clk_50M    ;
+; N/A   ; None         ; 11.998 ns  ; compteur3bcd:compteur3bcd0|iq[2] ; S_u[4] ; clk_50M    ;
+; N/A   ; None         ; 11.778 ns  ; compteur3bcd:compteur3bcd0|iq[1] ; S_u[2] ; clk_50M    ;
+; N/A   ; None         ; 11.762 ns  ; compteur3bcd:compteur3bcd0|iq[1] ; S_u[3] ; clk_50M    ;
+; N/A   ; None         ; 11.746 ns  ; compteur3bcd:compteur3bcd0|iq[1] ; S_u[1] ; clk_50M    ;
+; N/A   ; None         ; 11.726 ns  ; compteur3bcd:compteur3bcd0|iq[1] ; S_u[0] ; clk_50M    ;
+; N/A   ; None         ; 11.590 ns  ; compteur3bcd:compteur3bcd0|iq[0] ; S_u[3] ; clk_50M    ;
+; N/A   ; None         ; 11.577 ns  ; compteur3bcd:compteur3bcd0|iq[0] ; S_u[2] ; clk_50M    ;
+; N/A   ; None         ; 11.575 ns  ; compteur3bcd:compteur3bcd0|iq[0] ; S_u[1] ; clk_50M    ;
+; N/A   ; None         ; 11.553 ns  ; compteur3bcd:compteur3bcd0|iq[0] ; S_u[0] ; clk_50M    ;
+; N/A   ; None         ; 11.541 ns  ; compteur3bcd:compteur3bcd0|iq[3] ; S_u[2] ; clk_50M    ;
+; N/A   ; None         ; 11.528 ns  ; compteur3bcd:compteur3bcd0|iq[3] ; S_u[3] ; clk_50M    ;
+; N/A   ; None         ; 11.523 ns  ; compteur3bcd:compteur3bcd0|iq[3] ; S_u[1] ; clk_50M    ;
+; N/A   ; None         ; 11.509 ns  ; compteur3bcd:compteur3bcd0|iq[1] ; S_u[6] ; clk_50M    ;
+; N/A   ; None         ; 11.503 ns  ; compteur3bcd:compteur3bcd0|iq[3] ; S_u[0] ; clk_50M    ;
+; N/A   ; None         ; 11.492 ns  ; compteur3bcd:compteur3bcd0|iq[1] ; S_u[4] ; clk_50M    ;
+; N/A   ; None         ; 11.484 ns  ; compteur3bcd:compteur3bcd0|iq[1] ; S_u[5] ; clk_50M    ;
+; N/A   ; None         ; 11.337 ns  ; compteur3bcd:compteur3bcd0|iq[0] ; S_u[6] ; clk_50M    ;
+; N/A   ; None         ; 11.324 ns  ; compteur3bcd:compteur3bcd0|iq[0] ; S_u[4] ; clk_50M    ;
+; N/A   ; None         ; 11.311 ns  ; compteur3bcd:compteur3bcd0|iq[0] ; S_u[5] ; clk_50M    ;
+; N/A   ; None         ; 11.285 ns  ; compteur3bcd:compteur3bcd0|iq[3] ; S_u[6] ; clk_50M    ;
+; N/A   ; None         ; 11.255 ns  ; compteur3bcd:compteur3bcd0|iq[3] ; S_u[4] ; clk_50M    ;
+; N/A   ; None         ; 11.242 ns  ; compteur3bcd:compteur3bcd0|iq[3] ; S_u[5] ; clk_50M    ;
++-------+--------------+------------+----------------------------------+--------+------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; th                                                                                              ;
++---------------+-------------+-----------+---------+----------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From    ; To                               ; To Clock ;
++---------------+-------------+-----------+---------+----------------------------------+----------+
+; N/A           ; None        ; 3.639 ns  ; data[3] ; compteur3bcd:compteur3bcd0|iq[3] ; clk_50M  ;
+; N/A           ; None        ; 3.601 ns  ; data[3] ; compteur3bcd:compteur3bcd0|iq[2] ; clk_50M  ;
+; N/A           ; None        ; 3.429 ns  ; data[3] ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
+; N/A           ; None        ; 3.429 ns  ; data[3] ; compteur3bcd:compteur3bcd0|iq[1] ; clk_50M  ;
+; N/A           ; None        ; 3.323 ns  ; data[2] ; compteur3bcd:compteur3bcd0|iq[2] ; clk_50M  ;
+; N/A           ; None        ; 3.065 ns  ; data[1] ; compteur3bcd:compteur3bcd0|iq[1] ; clk_50M  ;
+; N/A           ; None        ; 2.996 ns  ; data[0] ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
+; N/A           ; None        ; 2.882 ns  ; data[2] ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
+; N/A           ; None        ; 2.882 ns  ; data[2] ; compteur3bcd:compteur3bcd0|iq[1] ; clk_50M  ;
+; N/A           ; None        ; 2.875 ns  ; data[2] ; compteur3bcd:compteur3bcd0|iq[3] ; clk_50M  ;
+; N/A           ; None        ; 2.633 ns  ; data[1] ; compteur3bcd:compteur3bcd0|iq[2] ; clk_50M  ;
+; N/A           ; None        ; 2.461 ns  ; data[1] ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
+; N/A           ; None        ; 2.454 ns  ; data[1] ; compteur3bcd:compteur3bcd0|iq[3] ; clk_50M  ;
+; N/A           ; None        ; -0.786 ns ; reset   ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
+; N/A           ; None        ; -0.786 ns ; reset   ; compteur3bcd:compteur3bcd0|iq[1] ; clk_50M  ;
+; N/A           ; None        ; -0.786 ns ; reset   ; compteur3bcd:compteur3bcd0|iq[2] ; clk_50M  ;
+; N/A           ; None        ; -0.786 ns ; reset   ; compteur3bcd:compteur3bcd0|iq[3] ; clk_50M  ;
+; N/A           ; None        ; -0.970 ns ; C       ; compteur3bcd:compteur3bcd0|iq[1] ; clk_50M  ;
+; N/A           ; None        ; -1.102 ns ; load    ; compteur3bcd:compteur3bcd0|iq[2] ; clk_50M  ;
+; N/A           ; None        ; -1.108 ns ; C       ; compteur3bcd:compteur3bcd0|iq[3] ; clk_50M  ;
+; N/A           ; None        ; -1.242 ns ; C       ; compteur3bcd:compteur3bcd0|iq[2] ; clk_50M  ;
+; N/A           ; None        ; -1.274 ns ; load    ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
+; N/A           ; None        ; -1.274 ns ; load    ; compteur3bcd:compteur3bcd0|iq[1] ; clk_50M  ;
+; N/A           ; None        ; -1.281 ns ; load    ; compteur3bcd:compteur3bcd0|iq[3] ; clk_50M  ;
+; N/A           ; None        ; -1.558 ns ; C       ; compteur3bcd:compteur3bcd0|iq[0] ; clk_50M  ;
++---------------+-------------+-----------+---------+----------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Sep 11 19:05:45 2023
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off composant -c composant --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk_50M" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "DivFreq:DivFreq0|clk_1prime" as buffer
+Info: Clock "clk_50M" has Internal fmax of 197.82 MHz between source register "DivFreq:DivFreq0|compteur[0]" and destination register "DivFreq:DivFreq0|compteur[31]" (period= 5.055 ns)
+    Info: + Longest register to register delay is 4.836 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X38_Y11_N15; Fanout = 3; REG Node = 'DivFreq:DivFreq0|compteur[0]'
+        Info: 2: + IC(0.463 ns) + CELL(0.393 ns) = 0.856 ns; Loc. = LCCOMB_X37_Y11_N0; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~1'
+        Info: 3: + IC(0.000 ns) + CELL(0.071 ns) = 0.927 ns; Loc. = LCCOMB_X37_Y11_N2; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~3'
+        Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 0.998 ns; Loc. = LCCOMB_X37_Y11_N4; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~5'
+        Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 1.069 ns; Loc. = LCCOMB_X37_Y11_N6; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~7'
+        Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 1.140 ns; Loc. = LCCOMB_X37_Y11_N8; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~9'
+        Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 1.211 ns; Loc. = LCCOMB_X37_Y11_N10; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~11'
+        Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 1.282 ns; Loc. = LCCOMB_X37_Y11_N12; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~13'
+        Info: 9: + IC(0.000 ns) + CELL(0.159 ns) = 1.441 ns; Loc. = LCCOMB_X37_Y11_N14; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~15'
+        Info: 10: + IC(0.000 ns) + CELL(0.071 ns) = 1.512 ns; Loc. = LCCOMB_X37_Y11_N16; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~17'
+        Info: 11: + IC(0.000 ns) + CELL(0.071 ns) = 1.583 ns; Loc. = LCCOMB_X37_Y11_N18; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~19'
+        Info: 12: + IC(0.000 ns) + CELL(0.071 ns) = 1.654 ns; Loc. = LCCOMB_X37_Y11_N20; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~21'
+        Info: 13: + IC(0.000 ns) + CELL(0.071 ns) = 1.725 ns; Loc. = LCCOMB_X37_Y11_N22; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~23'
+        Info: 14: + IC(0.000 ns) + CELL(0.071 ns) = 1.796 ns; Loc. = LCCOMB_X37_Y11_N24; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~25'
+        Info: 15: + IC(0.000 ns) + CELL(0.071 ns) = 1.867 ns; Loc. = LCCOMB_X37_Y11_N26; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~27'
+        Info: 16: + IC(0.000 ns) + CELL(0.071 ns) = 1.938 ns; Loc. = LCCOMB_X37_Y11_N28; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~29'
+        Info: 17: + IC(0.000 ns) + CELL(0.146 ns) = 2.084 ns; Loc. = LCCOMB_X37_Y11_N30; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~31'
+        Info: 18: + IC(0.000 ns) + CELL(0.071 ns) = 2.155 ns; Loc. = LCCOMB_X37_Y10_N0; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~33'
+        Info: 19: + IC(0.000 ns) + CELL(0.071 ns) = 2.226 ns; Loc. = LCCOMB_X37_Y10_N2; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~35'
+        Info: 20: + IC(0.000 ns) + CELL(0.071 ns) = 2.297 ns; Loc. = LCCOMB_X37_Y10_N4; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~37'
+        Info: 21: + IC(0.000 ns) + CELL(0.071 ns) = 2.368 ns; Loc. = LCCOMB_X37_Y10_N6; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~39'
+        Info: 22: + IC(0.000 ns) + CELL(0.071 ns) = 2.439 ns; Loc. = LCCOMB_X37_Y10_N8; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~41'
+        Info: 23: + IC(0.000 ns) + CELL(0.071 ns) = 2.510 ns; Loc. = LCCOMB_X37_Y10_N10; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~43'
+        Info: 24: + IC(0.000 ns) + CELL(0.071 ns) = 2.581 ns; Loc. = LCCOMB_X37_Y10_N12; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~45'
+        Info: 25: + IC(0.000 ns) + CELL(0.159 ns) = 2.740 ns; Loc. = LCCOMB_X37_Y10_N14; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~47'
+        Info: 26: + IC(0.000 ns) + CELL(0.071 ns) = 2.811 ns; Loc. = LCCOMB_X37_Y10_N16; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~49'
+        Info: 27: + IC(0.000 ns) + CELL(0.071 ns) = 2.882 ns; Loc. = LCCOMB_X37_Y10_N18; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~51'
+        Info: 28: + IC(0.000 ns) + CELL(0.071 ns) = 2.953 ns; Loc. = LCCOMB_X37_Y10_N20; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~53'
+        Info: 29: + IC(0.000 ns) + CELL(0.071 ns) = 3.024 ns; Loc. = LCCOMB_X37_Y10_N22; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~55'
+        Info: 30: + IC(0.000 ns) + CELL(0.071 ns) = 3.095 ns; Loc. = LCCOMB_X37_Y10_N24; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~57'
+        Info: 31: + IC(0.000 ns) + CELL(0.071 ns) = 3.166 ns; Loc. = LCCOMB_X37_Y10_N26; Fanout = 2; COMB Node = 'DivFreq:DivFreq0|Add0~59'
+        Info: 32: + IC(0.000 ns) + CELL(0.071 ns) = 3.237 ns; Loc. = LCCOMB_X37_Y10_N28; Fanout = 1; COMB Node = 'DivFreq:DivFreq0|Add0~61'
+        Info: 33: + IC(0.000 ns) + CELL(0.410 ns) = 3.647 ns; Loc. = LCCOMB_X37_Y10_N30; Fanout = 1; COMB Node = 'DivFreq:DivFreq0|Add0~71'
+        Info: 34: + IC(0.955 ns) + CELL(0.150 ns) = 4.752 ns; Loc. = LCCOMB_X36_Y11_N2; Fanout = 1; COMB Node = 'DivFreq:DivFreq0|Add0~73'
+        Info: 35: + IC(0.000 ns) + CELL(0.084 ns) = 4.836 ns; Loc. = LCFF_X36_Y11_N3; Fanout = 34; REG Node = 'DivFreq:DivFreq0|compteur[31]'
+        Info: Total cell delay = 3.418 ns ( 70.68 % )
+        Info: Total interconnect delay = 1.418 ns ( 29.32 % )
+    Info: - Smallest clock skew is -0.005 ns
+        Info: + Shortest clock path from clock "clk_50M" to destination register is 2.642 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clk_50M'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 32; COMB Node = 'clk_50M~clkctrl'
+            Info: 3: + IC(0.988 ns) + CELL(0.537 ns) = 2.642 ns; Loc. = LCFF_X36_Y11_N3; Fanout = 34; REG Node = 'DivFreq:DivFreq0|compteur[31]'
+            Info: Total cell delay = 1.536 ns ( 58.14 % )
+            Info: Total interconnect delay = 1.106 ns ( 41.86 % )
+        Info: - Longest clock path from clock "clk_50M" to source register is 2.647 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clk_50M'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 32; COMB Node = 'clk_50M~clkctrl'
+            Info: 3: + IC(0.993 ns) + CELL(0.537 ns) = 2.647 ns; Loc. = LCFF_X38_Y11_N15; Fanout = 3; REG Node = 'DivFreq:DivFreq0|compteur[0]'
+            Info: Total cell delay = 1.536 ns ( 58.03 % )
+            Info: Total interconnect delay = 1.111 ns ( 41.97 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "compteur3bcd:compteur3bcd0|iq[3]" (data pin = "C", clock pin = "clk_50M") is 2.626 ns
+    Info: + Longest pin to register delay is 9.246 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.852 ns) = 0.852 ns; Loc. = PIN_V1; Fanout = 7; PIN Node = 'C'
+        Info: 2: + IC(6.068 ns) + CELL(0.419 ns) = 7.339 ns; Loc. = LCCOMB_X27_Y3_N22; Fanout = 1; COMB Node = 'compteur3bcd:compteur3bcd0|Add0~2'
+        Info: 3: + IC(0.464 ns) + CELL(0.414 ns) = 8.217 ns; Loc. = LCCOMB_X27_Y3_N6; Fanout = 2; COMB Node = 'compteur3bcd:compteur3bcd0|Add0~4'
+        Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 8.288 ns; Loc. = LCCOMB_X27_Y3_N8; Fanout = 2; COMB Node = 'compteur3bcd:compteur3bcd0|Add0~6'
+        Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 8.359 ns; Loc. = LCCOMB_X27_Y3_N10; Fanout = 1; COMB Node = 'compteur3bcd:compteur3bcd0|Add0~8'
+        Info: 6: + IC(0.000 ns) + CELL(0.410 ns) = 8.769 ns; Loc. = LCCOMB_X27_Y3_N12; Fanout = 1; COMB Node = 'compteur3bcd:compteur3bcd0|Add0~9'
+        Info: 7: + IC(0.243 ns) + CELL(0.150 ns) = 9.162 ns; Loc. = LCCOMB_X27_Y3_N30; Fanout = 1; COMB Node = 'compteur3bcd:compteur3bcd0|id[3]~39'
+        Info: 8: + IC(0.000 ns) + CELL(0.084 ns) = 9.246 ns; Loc. = LCFF_X27_Y3_N31; Fanout = 15; REG Node = 'compteur3bcd:compteur3bcd0|iq[3]'
+        Info: Total cell delay = 2.471 ns ( 26.73 % )
+        Info: Total interconnect delay = 6.775 ns ( 73.27 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "clk_50M" to destination register is 6.584 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clk_50M'
+        Info: 2: + IC(1.857 ns) + CELL(0.787 ns) = 3.643 ns; Loc. = LCFF_X35_Y10_N17; Fanout = 2; REG Node = 'DivFreq:DivFreq0|clk_1prime'
+        Info: 3: + IC(1.367 ns) + CELL(0.000 ns) = 5.010 ns; Loc. = CLKCTRL_G12; Fanout = 4; COMB Node = 'DivFreq:DivFreq0|clk_1prime~clkctrl'
+        Info: 4: + IC(1.037 ns) + CELL(0.537 ns) = 6.584 ns; Loc. = LCFF_X27_Y3_N31; Fanout = 15; REG Node = 'compteur3bcd:compteur3bcd0|iq[3]'
+        Info: Total cell delay = 2.323 ns ( 35.28 % )
+        Info: Total interconnect delay = 4.261 ns ( 64.72 % )
+Info: tco from clock "clk_50M" to destination pin "S_u[2]" through register "compteur3bcd:compteur3bcd0|iq[2]" is 12.310 ns
+    Info: + Longest clock path from clock "clk_50M" to source register is 6.584 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clk_50M'
+        Info: 2: + IC(1.857 ns) + CELL(0.787 ns) = 3.643 ns; Loc. = LCFF_X35_Y10_N17; Fanout = 2; REG Node = 'DivFreq:DivFreq0|clk_1prime'
+        Info: 3: + IC(1.367 ns) + CELL(0.000 ns) = 5.010 ns; Loc. = CLKCTRL_G12; Fanout = 4; COMB Node = 'DivFreq:DivFreq0|clk_1prime~clkctrl'
+        Info: 4: + IC(1.037 ns) + CELL(0.537 ns) = 6.584 ns; Loc. = LCFF_X27_Y3_N29; Fanout = 12; REG Node = 'compteur3bcd:compteur3bcd0|iq[2]'
+        Info: Total cell delay = 2.323 ns ( 35.28 % )
+        Info: Total interconnect delay = 4.261 ns ( 64.72 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 5.476 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X27_Y3_N29; Fanout = 12; REG Node = 'compteur3bcd:compteur3bcd0|iq[2]'
+        Info: 2: + IC(1.356 ns) + CELL(0.438 ns) = 1.794 ns; Loc. = LCCOMB_X25_Y3_N12; Fanout = 1; COMB Node = 'deco7seg:deco7seg0|Mux4~0'
+        Info: 3: + IC(0.884 ns) + CELL(2.798 ns) = 5.476 ns; Loc. = PIN_AE11; Fanout = 0; PIN Node = 'S_u[2]'
+        Info: Total cell delay = 3.236 ns ( 59.09 % )
+        Info: Total interconnect delay = 2.240 ns ( 40.91 % )
+Info: th for register "compteur3bcd:compteur3bcd0|iq[3]" (data pin = "data[3]", clock pin = "clk_50M") is 3.639 ns
+    Info: + Longest clock path from clock "clk_50M" to destination register is 6.584 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clk_50M'
+        Info: 2: + IC(1.857 ns) + CELL(0.787 ns) = 3.643 ns; Loc. = LCFF_X35_Y10_N17; Fanout = 2; REG Node = 'DivFreq:DivFreq0|clk_1prime'
+        Info: 3: + IC(1.367 ns) + CELL(0.000 ns) = 5.010 ns; Loc. = CLKCTRL_G12; Fanout = 4; COMB Node = 'DivFreq:DivFreq0|clk_1prime~clkctrl'
+        Info: 4: + IC(1.037 ns) + CELL(0.537 ns) = 6.584 ns; Loc. = LCFF_X27_Y3_N31; Fanout = 15; REG Node = 'compteur3bcd:compteur3bcd0|iq[3]'
+        Info: Total cell delay = 2.323 ns ( 35.28 % )
+        Info: Total interconnect delay = 4.261 ns ( 64.72 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 3.211 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_AE14; Fanout = 2; PIN Node = 'data[3]'
+        Info: 2: + IC(1.156 ns) + CELL(0.438 ns) = 2.593 ns; Loc. = LCCOMB_X27_Y3_N20; Fanout = 1; COMB Node = 'compteur3bcd:compteur3bcd0|id[3]~37'
+        Info: 3: + IC(0.289 ns) + CELL(0.245 ns) = 3.127 ns; Loc. = LCCOMB_X27_Y3_N30; Fanout = 1; COMB Node = 'compteur3bcd:compteur3bcd0|id[3]~39'
+        Info: 4: + IC(0.000 ns) + CELL(0.084 ns) = 3.211 ns; Loc. = LCFF_X27_Y3_N31; Fanout = 15; REG Node = 'compteur3bcd:compteur3bcd0|iq[3]'
+        Info: Total cell delay = 1.766 ns ( 55.00 % )
+        Info: Total interconnect delay = 1.445 ns ( 45.00 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 193 megabytes
+    Info: Processing ended: Mon Sep 11 19:05:46 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

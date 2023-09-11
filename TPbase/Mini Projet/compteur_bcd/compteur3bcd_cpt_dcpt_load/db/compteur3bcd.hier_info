@@ -1,0 +1,37 @@
+|compteur3bcd
+H => iq[3].CLK
+H => iq[2].CLK
+H => iq[1].CLK
+H => iq[0].CLK
+C => id~5.IN1
+C => id~0.IN1
+C => id~15.IN0
+C => id~10.IN0
+reset => iq[3].ACLR
+reset => iq[2].ACLR
+reset => iq[1].ACLR
+reset => iq[0].ACLR
+reset => id[0].OUTPUTSELECT
+reset => id[1].OUTPUTSELECT
+reset => id[2].OUTPUTSELECT
+reset => id[3].OUTPUTSELECT
+load => id~25.IN0
+load => id~20.IN1
+data[0] => id~29.DATAB
+data[0] => LessThan3.IN8
+data[0] => LessThan2.IN8
+data[1] => id~28.DATAB
+data[1] => LessThan3.IN7
+data[1] => LessThan2.IN7
+data[2] => id~27.DATAB
+data[2] => LessThan3.IN6
+data[2] => LessThan2.IN6
+data[3] => id~26.DATAB
+data[3] => LessThan3.IN5
+data[3] => LessThan2.IN5
+Q[0] <= iq[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= iq[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= iq[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= iq[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

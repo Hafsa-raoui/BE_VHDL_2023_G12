@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Sep 07 11:03:16 2023
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : compteur3bcd
+Top-level Entity Name : compteur3bcd
+Family : Cyclone II
+Total logic elements : 15
+    Total combinational functions : 15
+    Dedicated logic registers : 4
+Total registers : 4
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
