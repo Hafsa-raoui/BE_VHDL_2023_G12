@@ -1,0 +1,448 @@
+Simulator report for pwm
+Fri Sep 08 20:16:17 2023
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 189 nodes    ;
+; Simulation Coverage         ;      49.21 % ;
+; Total Number of Transitions ; 5568         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      49.21 % ;
+; Total nodes checked                                 ; 189          ;
+; Total output ports checked                          ; 189          ;
+; Total output ports with complete 1/0-value coverage ; 93           ;
+; Total output ports with no 1/0-value coverage       ; 96           ;
+; Total output ports with no 1-value coverage         ; 96           ;
+; Total output ports with no 0-value coverage         ; 96           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------+
+; Complete 1/0-Value Coverage                              ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |pwm|process_0~0  ; |pwm|process_0~0  ; out0             ;
+; |pwm|pwm_out~reg0 ; |pwm|pwm_out~reg0 ; regout           ;
+; |pwm|cpt~22       ; |pwm|cpt~22       ; out              ;
+; |pwm|cpt~23       ; |pwm|cpt~23       ; out              ;
+; |pwm|cpt~24       ; |pwm|cpt~24       ; out              ;
+; |pwm|cpt~25       ; |pwm|cpt~25       ; out              ;
+; |pwm|pwm_out~1    ; |pwm|pwm_out~1    ; out              ;
+; |pwm|cpt~48       ; |pwm|cpt~48       ; out              ;
+; |pwm|cpt~49       ; |pwm|cpt~49       ; out              ;
+; |pwm|cpt~50       ; |pwm|cpt~50       ; out              ;
+; |pwm|cpt~51       ; |pwm|cpt~51       ; out              ;
+; |pwm|cpt[2]       ; |pwm|cpt[2]       ; regout           ;
+; |pwm|cpt[1]       ; |pwm|cpt[1]       ; regout           ;
+; |pwm|cpt[0]       ; |pwm|cpt[0]       ; regout           ;
+; |pwm|clk          ; |pwm|clk          ; out              ;
+; |pwm|reset        ; |pwm|reset        ; out              ;
+; |pwm|pwm_out      ; |pwm|pwm_out      ; pin_out          ;
+; |pwm|LessThan0~0  ; |pwm|LessThan0~0  ; out0             ;
+; |pwm|LessThan0~2  ; |pwm|LessThan0~2  ; out0             ;
+; |pwm|LessThan0~4  ; |pwm|LessThan0~4  ; out0             ;
+; |pwm|LessThan0~5  ; |pwm|LessThan0~5  ; out0             ;
+; |pwm|LessThan0~6  ; |pwm|LessThan0~6  ; out0             ;
+; |pwm|LessThan0~8  ; |pwm|LessThan0~8  ; out0             ;
+; |pwm|LessThan0~9  ; |pwm|LessThan0~9  ; out0             ;
+; |pwm|LessThan0~10 ; |pwm|LessThan0~10 ; out0             ;
+; |pwm|LessThan0~12 ; |pwm|LessThan0~12 ; out0             ;
+; |pwm|LessThan0~13 ; |pwm|LessThan0~13 ; out0             ;
+; |pwm|LessThan0~14 ; |pwm|LessThan0~14 ; out0             ;
+; |pwm|LessThan0~16 ; |pwm|LessThan0~16 ; out0             ;
+; |pwm|LessThan0~18 ; |pwm|LessThan0~18 ; out0             ;
+; |pwm|LessThan0~20 ; |pwm|LessThan0~20 ; out0             ;
+; |pwm|LessThan0~22 ; |pwm|LessThan0~22 ; out0             ;
+; |pwm|LessThan0~24 ; |pwm|LessThan0~24 ; out0             ;
+; |pwm|LessThan0~26 ; |pwm|LessThan0~26 ; out0             ;
+; |pwm|LessThan0~28 ; |pwm|LessThan0~28 ; out0             ;
+; |pwm|LessThan0~30 ; |pwm|LessThan0~30 ; out0             ;
+; |pwm|LessThan0~31 ; |pwm|LessThan0~31 ; out0             ;
+; |pwm|LessThan0~32 ; |pwm|LessThan0~32 ; out0             ;
+; |pwm|LessThan1~1  ; |pwm|LessThan1~1  ; out0             ;
+; |pwm|LessThan1~2  ; |pwm|LessThan1~2  ; out0             ;
+; |pwm|LessThan1~3  ; |pwm|LessThan1~3  ; out0             ;
+; |pwm|LessThan1~4  ; |pwm|LessThan1~4  ; out0             ;
+; |pwm|LessThan1~5  ; |pwm|LessThan1~5  ; out0             ;
+; |pwm|LessThan1~6  ; |pwm|LessThan1~6  ; out0             ;
+; |pwm|LessThan1~7  ; |pwm|LessThan1~7  ; out0             ;
+; |pwm|LessThan1~8  ; |pwm|LessThan1~8  ; out0             ;
+; |pwm|LessThan1~9  ; |pwm|LessThan1~9  ; out0             ;
+; |pwm|LessThan1~10 ; |pwm|LessThan1~10 ; out0             ;
+; |pwm|LessThan1~11 ; |pwm|LessThan1~11 ; out0             ;
+; |pwm|LessThan1~12 ; |pwm|LessThan1~12 ; out0             ;
+; |pwm|LessThan1~13 ; |pwm|LessThan1~13 ; out0             ;
+; |pwm|LessThan1~14 ; |pwm|LessThan1~14 ; out0             ;
+; |pwm|LessThan1~16 ; |pwm|LessThan1~16 ; out0             ;
+; |pwm|LessThan1~18 ; |pwm|LessThan1~18 ; out0             ;
+; |pwm|LessThan1~20 ; |pwm|LessThan1~20 ; out0             ;
+; |pwm|LessThan1~22 ; |pwm|LessThan1~22 ; out0             ;
+; |pwm|LessThan1~24 ; |pwm|LessThan1~24 ; out0             ;
+; |pwm|LessThan1~26 ; |pwm|LessThan1~26 ; out0             ;
+; |pwm|LessThan1~28 ; |pwm|LessThan1~28 ; out0             ;
+; |pwm|LessThan1~30 ; |pwm|LessThan1~30 ; out0             ;
+; |pwm|LessThan1~31 ; |pwm|LessThan1~31 ; out0             ;
+; |pwm|LessThan2~0  ; |pwm|LessThan2~0  ; out0             ;
+; |pwm|LessThan2~1  ; |pwm|LessThan2~1  ; out0             ;
+; |pwm|LessThan2~2  ; |pwm|LessThan2~2  ; out0             ;
+; |pwm|LessThan2~3  ; |pwm|LessThan2~3  ; out0             ;
+; |pwm|LessThan2~4  ; |pwm|LessThan2~4  ; out0             ;
+; |pwm|LessThan2~5  ; |pwm|LessThan2~5  ; out0             ;
+; |pwm|LessThan2~6  ; |pwm|LessThan2~6  ; out0             ;
+; |pwm|LessThan2~7  ; |pwm|LessThan2~7  ; out0             ;
+; |pwm|LessThan2~8  ; |pwm|LessThan2~8  ; out0             ;
+; |pwm|LessThan2~10 ; |pwm|LessThan2~10 ; out0             ;
+; |pwm|LessThan2~11 ; |pwm|LessThan2~11 ; out0             ;
+; |pwm|LessThan2~12 ; |pwm|LessThan2~12 ; out0             ;
+; |pwm|LessThan2~14 ; |pwm|LessThan2~14 ; out0             ;
+; |pwm|LessThan2~16 ; |pwm|LessThan2~16 ; out0             ;
+; |pwm|LessThan2~18 ; |pwm|LessThan2~18 ; out0             ;
+; |pwm|LessThan2~20 ; |pwm|LessThan2~20 ; out0             ;
+; |pwm|LessThan2~22 ; |pwm|LessThan2~22 ; out0             ;
+; |pwm|LessThan2~24 ; |pwm|LessThan2~24 ; out0             ;
+; |pwm|LessThan2~26 ; |pwm|LessThan2~26 ; out0             ;
+; |pwm|LessThan2~28 ; |pwm|LessThan2~28 ; out0             ;
+; |pwm|LessThan2~29 ; |pwm|LessThan2~29 ; out0             ;
+; |pwm|LessThan2~30 ; |pwm|LessThan2~30 ; out0             ;
+; |pwm|Add0~0       ; |pwm|Add0~0       ; out0             ;
+; |pwm|Add0~1       ; |pwm|Add0~1       ; out0             ;
+; |pwm|Add0~2       ; |pwm|Add0~2       ; out0             ;
+; |pwm|Add0~3       ; |pwm|Add0~3       ; out0             ;
+; |pwm|Add0~4       ; |pwm|Add0~4       ; out0             ;
+; |pwm|Equal0~0     ; |pwm|Equal0~0     ; out0             ;
+; |pwm|Equal0~1     ; |pwm|Equal0~1     ; out0             ;
+; |pwm|Equal0~2     ; |pwm|Equal0~2     ; out0             ;
+; |pwm|Equal0~3     ; |pwm|Equal0~3     ; out0             ;
+; |pwm|Equal0~8     ; |pwm|Equal0~8     ; out0             ;
++-------------------+-------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------+
+; Missing 1-Value Coverage                                 ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |pwm|pwm_out~0    ; |pwm|pwm_out~0    ; out              ;
+; |pwm|cpt~17       ; |pwm|cpt~17       ; out              ;
+; |pwm|cpt~18       ; |pwm|cpt~18       ; out              ;
+; |pwm|cpt~19       ; |pwm|cpt~19       ; out              ;
+; |pwm|cpt~20       ; |pwm|cpt~20       ; out              ;
+; |pwm|cpt~21       ; |pwm|cpt~21       ; out              ;
+; |pwm|cpt~43       ; |pwm|cpt~43       ; out              ;
+; |pwm|cpt~44       ; |pwm|cpt~44       ; out              ;
+; |pwm|cpt~45       ; |pwm|cpt~45       ; out              ;
+; |pwm|cpt~46       ; |pwm|cpt~46       ; out              ;
+; |pwm|cpt~47       ; |pwm|cpt~47       ; out              ;
+; |pwm|cpt[8]       ; |pwm|cpt[8]       ; regout           ;
+; |pwm|cpt[7]       ; |pwm|cpt[7]       ; regout           ;
+; |pwm|cpt[6]       ; |pwm|cpt[6]       ; regout           ;
+; |pwm|cpt[5]       ; |pwm|cpt[5]       ; regout           ;
+; |pwm|cpt[4]       ; |pwm|cpt[4]       ; regout           ;
+; |pwm|cpt[3]       ; |pwm|cpt[3]       ; regout           ;
+; |pwm|freq[0]      ; |pwm|freq[0]      ; out              ;
+; |pwm|freq[1]      ; |pwm|freq[1]      ; out              ;
+; |pwm|freq[2]      ; |pwm|freq[2]      ; out              ;
+; |pwm|freq[3]      ; |pwm|freq[3]      ; out              ;
+; |pwm|freq[4]      ; |pwm|freq[4]      ; out              ;
+; |pwm|freq[5]      ; |pwm|freq[5]      ; out              ;
+; |pwm|freq[6]      ; |pwm|freq[6]      ; out              ;
+; |pwm|freq[7]      ; |pwm|freq[7]      ; out              ;
+; |pwm|duty[0]      ; |pwm|duty[0]      ; out              ;
+; |pwm|duty[1]      ; |pwm|duty[1]      ; out              ;
+; |pwm|duty[2]      ; |pwm|duty[2]      ; out              ;
+; |pwm|duty[3]      ; |pwm|duty[3]      ; out              ;
+; |pwm|duty[4]      ; |pwm|duty[4]      ; out              ;
+; |pwm|duty[5]      ; |pwm|duty[5]      ; out              ;
+; |pwm|duty[6]      ; |pwm|duty[6]      ; out              ;
+; |pwm|duty[7]      ; |pwm|duty[7]      ; out              ;
+; |pwm|LessThan0~1  ; |pwm|LessThan0~1  ; out0             ;
+; |pwm|LessThan0~3  ; |pwm|LessThan0~3  ; out0             ;
+; |pwm|LessThan0~7  ; |pwm|LessThan0~7  ; out0             ;
+; |pwm|LessThan0~11 ; |pwm|LessThan0~11 ; out0             ;
+; |pwm|LessThan0~15 ; |pwm|LessThan0~15 ; out0             ;
+; |pwm|LessThan0~17 ; |pwm|LessThan0~17 ; out0             ;
+; |pwm|LessThan0~19 ; |pwm|LessThan0~19 ; out0             ;
+; |pwm|LessThan0~21 ; |pwm|LessThan0~21 ; out0             ;
+; |pwm|LessThan0~23 ; |pwm|LessThan0~23 ; out0             ;
+; |pwm|LessThan0~25 ; |pwm|LessThan0~25 ; out0             ;
+; |pwm|LessThan0~27 ; |pwm|LessThan0~27 ; out0             ;
+; |pwm|LessThan0~29 ; |pwm|LessThan0~29 ; out0             ;
+; |pwm|LessThan1~0  ; |pwm|LessThan1~0  ; out0             ;
+; |pwm|LessThan1~15 ; |pwm|LessThan1~15 ; out0             ;
+; |pwm|LessThan1~17 ; |pwm|LessThan1~17 ; out0             ;
+; |pwm|LessThan1~19 ; |pwm|LessThan1~19 ; out0             ;
+; |pwm|LessThan1~21 ; |pwm|LessThan1~21 ; out0             ;
+; |pwm|LessThan1~23 ; |pwm|LessThan1~23 ; out0             ;
+; |pwm|LessThan1~25 ; |pwm|LessThan1~25 ; out0             ;
+; |pwm|LessThan1~27 ; |pwm|LessThan1~27 ; out0             ;
+; |pwm|LessThan1~29 ; |pwm|LessThan1~29 ; out0             ;
+; |pwm|LessThan2~9  ; |pwm|LessThan2~9  ; out0             ;
+; |pwm|LessThan2~13 ; |pwm|LessThan2~13 ; out0             ;
+; |pwm|LessThan2~15 ; |pwm|LessThan2~15 ; out0             ;
+; |pwm|LessThan2~17 ; |pwm|LessThan2~17 ; out0             ;
+; |pwm|LessThan2~19 ; |pwm|LessThan2~19 ; out0             ;
+; |pwm|LessThan2~21 ; |pwm|LessThan2~21 ; out0             ;
+; |pwm|LessThan2~23 ; |pwm|LessThan2~23 ; out0             ;
+; |pwm|LessThan2~25 ; |pwm|LessThan2~25 ; out0             ;
+; |pwm|LessThan2~27 ; |pwm|LessThan2~27 ; out0             ;
+; |pwm|Add0~5       ; |pwm|Add0~5       ; out0             ;
+; |pwm|Add0~6       ; |pwm|Add0~6       ; out0             ;
+; |pwm|Add0~7       ; |pwm|Add0~7       ; out0             ;
+; |pwm|Add0~8       ; |pwm|Add0~8       ; out0             ;
+; |pwm|Add0~9       ; |pwm|Add0~9       ; out0             ;
+; |pwm|Add0~10      ; |pwm|Add0~10      ; out0             ;
+; |pwm|Add0~11      ; |pwm|Add0~11      ; out0             ;
+; |pwm|Add0~12      ; |pwm|Add0~12      ; out0             ;
+; |pwm|Add0~13      ; |pwm|Add0~13      ; out0             ;
+; |pwm|Add0~14      ; |pwm|Add0~14      ; out0             ;
+; |pwm|Add1~0       ; |pwm|Add1~0       ; out0             ;
+; |pwm|Add1~1       ; |pwm|Add1~1       ; out0             ;
+; |pwm|Add1~2       ; |pwm|Add1~2       ; out0             ;
+; |pwm|Add1~3       ; |pwm|Add1~3       ; out0             ;
+; |pwm|Add1~4       ; |pwm|Add1~4       ; out0             ;
+; |pwm|Add1~5       ; |pwm|Add1~5       ; out0             ;
+; |pwm|Add1~6       ; |pwm|Add1~6       ; out0             ;
+; |pwm|Add1~7       ; |pwm|Add1~7       ; out0             ;
+; |pwm|Add1~8       ; |pwm|Add1~8       ; out0             ;
+; |pwm|Add1~9       ; |pwm|Add1~9       ; out0             ;
+; |pwm|Add1~10      ; |pwm|Add1~10      ; out0             ;
+; |pwm|Add1~11      ; |pwm|Add1~11      ; out0             ;
+; |pwm|Add1~12      ; |pwm|Add1~12      ; out0             ;
+; |pwm|Add1~13      ; |pwm|Add1~13      ; out0             ;
+; |pwm|Add1~14      ; |pwm|Add1~14      ; out0             ;
+; |pwm|Add1~15      ; |pwm|Add1~15      ; out0             ;
+; |pwm|Add1~16      ; |pwm|Add1~16      ; out0             ;
+; |pwm|Add1~17      ; |pwm|Add1~17      ; out0             ;
+; |pwm|Add1~18      ; |pwm|Add1~18      ; out0             ;
+; |pwm|Equal0~4     ; |pwm|Equal0~4     ; out0             ;
+; |pwm|Equal0~5     ; |pwm|Equal0~5     ; out0             ;
+; |pwm|Equal0~6     ; |pwm|Equal0~6     ; out0             ;
+; |pwm|Equal0~7     ; |pwm|Equal0~7     ; out0             ;
++-------------------+-------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------+
+; Missing 0-Value Coverage                                 ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |pwm|pwm_out~0    ; |pwm|pwm_out~0    ; out              ;
+; |pwm|cpt~17       ; |pwm|cpt~17       ; out              ;
+; |pwm|cpt~18       ; |pwm|cpt~18       ; out              ;
+; |pwm|cpt~19       ; |pwm|cpt~19       ; out              ;
+; |pwm|cpt~20       ; |pwm|cpt~20       ; out              ;
+; |pwm|cpt~21       ; |pwm|cpt~21       ; out              ;
+; |pwm|cpt~43       ; |pwm|cpt~43       ; out              ;
+; |pwm|cpt~44       ; |pwm|cpt~44       ; out              ;
+; |pwm|cpt~45       ; |pwm|cpt~45       ; out              ;
+; |pwm|cpt~46       ; |pwm|cpt~46       ; out              ;
+; |pwm|cpt~47       ; |pwm|cpt~47       ; out              ;
+; |pwm|cpt[8]       ; |pwm|cpt[8]       ; regout           ;
+; |pwm|cpt[7]       ; |pwm|cpt[7]       ; regout           ;
+; |pwm|cpt[6]       ; |pwm|cpt[6]       ; regout           ;
+; |pwm|cpt[5]       ; |pwm|cpt[5]       ; regout           ;
+; |pwm|cpt[4]       ; |pwm|cpt[4]       ; regout           ;
+; |pwm|cpt[3]       ; |pwm|cpt[3]       ; regout           ;
+; |pwm|freq[0]      ; |pwm|freq[0]      ; out              ;
+; |pwm|freq[1]      ; |pwm|freq[1]      ; out              ;
+; |pwm|freq[2]      ; |pwm|freq[2]      ; out              ;
+; |pwm|freq[3]      ; |pwm|freq[3]      ; out              ;
+; |pwm|freq[4]      ; |pwm|freq[4]      ; out              ;
+; |pwm|freq[5]      ; |pwm|freq[5]      ; out              ;
+; |pwm|freq[6]      ; |pwm|freq[6]      ; out              ;
+; |pwm|freq[7]      ; |pwm|freq[7]      ; out              ;
+; |pwm|duty[0]      ; |pwm|duty[0]      ; out              ;
+; |pwm|duty[1]      ; |pwm|duty[1]      ; out              ;
+; |pwm|duty[2]      ; |pwm|duty[2]      ; out              ;
+; |pwm|duty[3]      ; |pwm|duty[3]      ; out              ;
+; |pwm|duty[4]      ; |pwm|duty[4]      ; out              ;
+; |pwm|duty[5]      ; |pwm|duty[5]      ; out              ;
+; |pwm|duty[6]      ; |pwm|duty[6]      ; out              ;
+; |pwm|duty[7]      ; |pwm|duty[7]      ; out              ;
+; |pwm|LessThan0~1  ; |pwm|LessThan0~1  ; out0             ;
+; |pwm|LessThan0~3  ; |pwm|LessThan0~3  ; out0             ;
+; |pwm|LessThan0~7  ; |pwm|LessThan0~7  ; out0             ;
+; |pwm|LessThan0~11 ; |pwm|LessThan0~11 ; out0             ;
+; |pwm|LessThan0~15 ; |pwm|LessThan0~15 ; out0             ;
+; |pwm|LessThan0~17 ; |pwm|LessThan0~17 ; out0             ;
+; |pwm|LessThan0~19 ; |pwm|LessThan0~19 ; out0             ;
+; |pwm|LessThan0~21 ; |pwm|LessThan0~21 ; out0             ;
+; |pwm|LessThan0~23 ; |pwm|LessThan0~23 ; out0             ;
+; |pwm|LessThan0~25 ; |pwm|LessThan0~25 ; out0             ;
+; |pwm|LessThan0~27 ; |pwm|LessThan0~27 ; out0             ;
+; |pwm|LessThan0~29 ; |pwm|LessThan0~29 ; out0             ;
+; |pwm|LessThan1~0  ; |pwm|LessThan1~0  ; out0             ;
+; |pwm|LessThan1~15 ; |pwm|LessThan1~15 ; out0             ;
+; |pwm|LessThan1~17 ; |pwm|LessThan1~17 ; out0             ;
+; |pwm|LessThan1~19 ; |pwm|LessThan1~19 ; out0             ;
+; |pwm|LessThan1~21 ; |pwm|LessThan1~21 ; out0             ;
+; |pwm|LessThan1~23 ; |pwm|LessThan1~23 ; out0             ;
+; |pwm|LessThan1~25 ; |pwm|LessThan1~25 ; out0             ;
+; |pwm|LessThan1~27 ; |pwm|LessThan1~27 ; out0             ;
+; |pwm|LessThan1~29 ; |pwm|LessThan1~29 ; out0             ;
+; |pwm|LessThan2~9  ; |pwm|LessThan2~9  ; out0             ;
+; |pwm|LessThan2~13 ; |pwm|LessThan2~13 ; out0             ;
+; |pwm|LessThan2~15 ; |pwm|LessThan2~15 ; out0             ;
+; |pwm|LessThan2~17 ; |pwm|LessThan2~17 ; out0             ;
+; |pwm|LessThan2~19 ; |pwm|LessThan2~19 ; out0             ;
+; |pwm|LessThan2~21 ; |pwm|LessThan2~21 ; out0             ;
+; |pwm|LessThan2~23 ; |pwm|LessThan2~23 ; out0             ;
+; |pwm|LessThan2~25 ; |pwm|LessThan2~25 ; out0             ;
+; |pwm|LessThan2~27 ; |pwm|LessThan2~27 ; out0             ;
+; |pwm|Add0~5       ; |pwm|Add0~5       ; out0             ;
+; |pwm|Add0~6       ; |pwm|Add0~6       ; out0             ;
+; |pwm|Add0~7       ; |pwm|Add0~7       ; out0             ;
+; |pwm|Add0~8       ; |pwm|Add0~8       ; out0             ;
+; |pwm|Add0~9       ; |pwm|Add0~9       ; out0             ;
+; |pwm|Add0~10      ; |pwm|Add0~10      ; out0             ;
+; |pwm|Add0~11      ; |pwm|Add0~11      ; out0             ;
+; |pwm|Add0~12      ; |pwm|Add0~12      ; out0             ;
+; |pwm|Add0~13      ; |pwm|Add0~13      ; out0             ;
+; |pwm|Add0~14      ; |pwm|Add0~14      ; out0             ;
+; |pwm|Add1~0       ; |pwm|Add1~0       ; out0             ;
+; |pwm|Add1~1       ; |pwm|Add1~1       ; out0             ;
+; |pwm|Add1~2       ; |pwm|Add1~2       ; out0             ;
+; |pwm|Add1~3       ; |pwm|Add1~3       ; out0             ;
+; |pwm|Add1~4       ; |pwm|Add1~4       ; out0             ;
+; |pwm|Add1~5       ; |pwm|Add1~5       ; out0             ;
+; |pwm|Add1~6       ; |pwm|Add1~6       ; out0             ;
+; |pwm|Add1~7       ; |pwm|Add1~7       ; out0             ;
+; |pwm|Add1~8       ; |pwm|Add1~8       ; out0             ;
+; |pwm|Add1~9       ; |pwm|Add1~9       ; out0             ;
+; |pwm|Add1~10      ; |pwm|Add1~10      ; out0             ;
+; |pwm|Add1~11      ; |pwm|Add1~11      ; out0             ;
+; |pwm|Add1~12      ; |pwm|Add1~12      ; out0             ;
+; |pwm|Add1~13      ; |pwm|Add1~13      ; out0             ;
+; |pwm|Add1~14      ; |pwm|Add1~14      ; out0             ;
+; |pwm|Add1~15      ; |pwm|Add1~15      ; out0             ;
+; |pwm|Add1~16      ; |pwm|Add1~16      ; out0             ;
+; |pwm|Add1~17      ; |pwm|Add1~17      ; out0             ;
+; |pwm|Add1~18      ; |pwm|Add1~18      ; out0             ;
+; |pwm|Equal0~4     ; |pwm|Equal0~4     ; out0             ;
+; |pwm|Equal0~5     ; |pwm|Equal0~5     ; out0             ;
+; |pwm|Equal0~6     ; |pwm|Equal0~6     ; out0             ;
+; |pwm|Equal0~7     ; |pwm|Equal0~7     ; out0             ;
++-------------------+-------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Sep 08 20:16:17 2023
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off pwm -c pwm
+Info: Using vector source file "C:/Users/Lucky/Desktop/BE/components_pwm/pwm/pwm.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of pwm.vwf called pwm.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      49.21 %
+Info: Number of transitions in simulation is 5568
+Info: Vector file pwm.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 154 megabytes
+    Info: Processing ended: Fri Sep 08 20:16:17 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

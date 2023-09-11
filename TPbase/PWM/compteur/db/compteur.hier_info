@@ -1,0 +1,35 @@
+|compteur
+clk => cmt[7].CLK
+clk => cmt[6].CLK
+clk => cmt[5].CLK
+clk => cmt[4].CLK
+clk => cmt[3].CLK
+clk => cmt[2].CLK
+clk => cmt[1].CLK
+clk => cmt[0].CLK
+reset => cmt[7].ACLR
+reset => cmt[6].ACLR
+reset => cmt[5].ACLR
+reset => cmt[4].ACLR
+reset => cmt[3].ACLR
+reset => cmt[2].ACLR
+reset => cmt[1].ACLR
+reset => cmt[0].ACLR
+freq[0] => LessThan0.IN8
+freq[1] => LessThan0.IN7
+freq[2] => LessThan0.IN6
+freq[3] => LessThan0.IN5
+freq[4] => LessThan0.IN4
+freq[5] => LessThan0.IN3
+freq[6] => LessThan0.IN2
+freq[7] => LessThan0.IN1
+sortie[0] <= cmt[0].DB_MAX_OUTPUT_PORT_TYPE
+sortie[1] <= cmt[1].DB_MAX_OUTPUT_PORT_TYPE
+sortie[2] <= cmt[2].DB_MAX_OUTPUT_PORT_TYPE
+sortie[3] <= cmt[3].DB_MAX_OUTPUT_PORT_TYPE
+sortie[4] <= cmt[4].DB_MAX_OUTPUT_PORT_TYPE
+sortie[5] <= cmt[5].DB_MAX_OUTPUT_PORT_TYPE
+sortie[6] <= cmt[6].DB_MAX_OUTPUT_PORT_TYPE
+sortie[7] <= cmt[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
