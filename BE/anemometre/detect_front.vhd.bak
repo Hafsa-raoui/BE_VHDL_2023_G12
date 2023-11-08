@@ -1,0 +1,11 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity detect_front is
+port(
+		clk_50M  : in std_logic;
+		freq_in	: in std_logic;
+		reset		 : out std_logic:
+		)
+		

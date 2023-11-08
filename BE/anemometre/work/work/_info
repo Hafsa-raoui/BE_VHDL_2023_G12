@@ -1,0 +1,172 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/myhaj/OneDrive/Bureau/anemometre/work
+Eanemometre_component
+Z0 w1699396422
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Lucky/Desktop/anemometre/work
+Z4 8C:/Users/Lucky/Desktop/anemometre/anemometre_component.vhd
+Z5 FC:/Users/Lucky/Desktop/anemometre/anemometre_component.vhd
+l0
+L24
+VR]D77Dj]8;2M]c_P^08R>0
+!s100 Ach>4D4[E@CIT@A7NboM]1
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1699476209
+!i10b 1
+Z8 !s108 1699476209.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/Lucky/Desktop/anemometre/anemometre_component.vhd|
+Z10 !s107 C:/Users/Lucky/Desktop/anemometre/anemometre_component.vhd|
+!i113 1
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Abdf_type
+R1
+R2
+DEx4 work 20 anemometre_component 0 22 R]D77Dj]8;2M]c_P^08R>0
+l75
+L34
+VcOX]Y14zeFRT<hFWD?`XB0
+!s100 7WTo^]5<TC`_F<=@:5ga>2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edivfreq
+Z13 w1699295542
+Z14 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z16 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z17 8C:/Users/Lucky/Desktop/anemometre/divfreq.vhd
+Z18 FC:/Users/Lucky/Desktop/anemometre/divfreq.vhd
+l0
+L10
+VlPfX6Q;XDPhBj6B:j:TRU3
+!s100 Hnbl9Li1@06V@=52d`N=13
+R6
+32
+Z19 !s110 1699478109
+!i10b 1
+Z20 !s108 1699478109.000000
+Z21 !s90 -reportprogress|300|-work|work|C:/Users/Lucky/Desktop/anemometre/divfreq.vhd|
+Z22 !s107 C:/Users/Lucky/Desktop/anemometre/divfreq.vhd|
+!i113 1
+R11
+R12
+Aarch
+R14
+R15
+R16
+R1
+R2
+DEx4 work 7 divfreq 0 22 lPfX6Q;XDPhBj6B:j:TRU3
+l24
+L21
+V4iYP9VOTB[?9z4<IaD<gV2
+!s100 11i<V_CQMDJ1NAUQgIUL10
+R6
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R11
+R12
+Etb_anemometre_component
+Z23 w1699475804
+R1
+R2
+R3
+Z24 8C:/Users/Lucky/Desktop/anemometre/tb_anemometre_component.vhd
+Z25 FC:/Users/Lucky/Desktop/anemometre/tb_anemometre_component.vhd
+l0
+L30
+Vm?R?<oKO76hO]?mI^o;kC3
+!s100 Zk1Y^@TI6P>U>ekI88DDh2
+R6
+32
+R7
+!i10b 1
+R8
+Z26 !s90 -reportprogress|300|-work|work|C:/Users/Lucky/Desktop/anemometre/tb_anemometre_component.vhd|
+Z27 !s107 C:/Users/Lucky/Desktop/anemometre/tb_anemometre_component.vhd|
+!i113 1
+R11
+R12
+Aanemometre_component_arch
+R1
+R2
+DEx4 work 23 tb_anemometre_component 0 22 m?R?<oKO76hO]?mI^o;kC3
+l47
+L32
+VNKBjD?3ok>[JCYSSc1I0D0
+!s100 Z?XXfdZ]:z1UWDc_feRc52
+R6
+32
+R7
+!i10b 1
+R8
+R26
+R27
+!i113 1
+R11
+R12
+Etb_divfreq
+Z28 w1699478073
+R1
+R2
+R3
+Z29 8C:/Users/Lucky/Desktop/anemometre/tb_DivFreq.vhd
+Z30 FC:/Users/Lucky/Desktop/anemometre/tb_DivFreq.vhd
+l0
+L30
+VJn8g?4i]5mkZ11i_N=Yfl0
+!s100 EFKcj8k_9iSn7Xi;lENgG2
+R6
+32
+R19
+!i10b 1
+R20
+Z31 !s90 -reportprogress|300|-work|work|C:/Users/Lucky/Desktop/anemometre/tb_DivFreq.vhd|
+Z32 !s107 C:/Users/Lucky/Desktop/anemometre/tb_DivFreq.vhd|
+!i113 1
+R11
+R12
+Adivfreq_arch
+R1
+R2
+Z33 DEx4 work 10 tb_divfreq 0 22 Jn8g?4i]5mkZ11i_N=Yfl0
+l45
+L32
+Vz9>RJJgcnk3?SIQaf1Gok3
+!s100 `GeOE9RE8lG[@C;UUGWWn0
+R6
+32
+R19
+!i10b 1
+R20
+R31
+R32
+!i113 1
+R11
+R12

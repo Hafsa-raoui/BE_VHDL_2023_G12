@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity counter is
+	generic(
+			count : integer := 8
+		);
+	port (
+	
+			clk_50M : in std_logic;
+			reset 		: in std_logic;
+			clk_1		: in std_logic;
+			
