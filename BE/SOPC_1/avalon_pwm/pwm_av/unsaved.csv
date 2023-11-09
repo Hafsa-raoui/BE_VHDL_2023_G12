@@ -1,0 +1,30 @@
+# system info unsaved on 2023.09.28.11:26:20
+system_info:
+name,value
+DEVICE,EP4CE22F17C6
+DEVICE_FAMILY,Cyclone IV E
+GENERATION_ID,1695893174
+#
+#
+# Files generated for unsaved on 2023.09.28.11:26:20
+files:
+filepath,kind,attributes,module,is_top
+simulation/unsaved.vhd,VHDL,,unsaved,true
+simulation/submodules/unsaved_bp.vhd,VHDL,,unsaved_bp,false
+simulation/submodules/unsaved_cpu.v,VERILOG,,unsaved_cpu,false
+simulation/submodules/unsaved_jtag_uart_0.vhd,VHDL,,unsaved_jtag_uart_0,false
+simulation/submodules/unsaved_leds.vhd,VHDL,,unsaved_leds,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+unsaved.bp,unsaved_bp
+unsaved.cpu,unsaved_cpu
+unsaved.cpu.cpu,unsaved_cpu_cpu
+unsaved.jtag_uart_0,unsaved_jtag_uart_0
+unsaved.leds,unsaved_leds
+unsaved.pwm_0,unsaved_pwm_0
+unsaved.ram,unsaved_ram
+unsaved.mm_interconnect_0,unsaved_mm_interconnect_0
+unsaved.irq_mapper,unsaved_irq_mapper
+unsaved.rst_controller,altera_reset_controller
