@@ -32,10 +32,10 @@ END tb_anemometre_component;
 ARCHITECTURE anemometre_component_arch OF tb_anemometre_component IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL a_reset : STD_LOGIC:='0';
-SIGNAL clk_50M : STD_LOGIC:='0';
-SIGNAL d_out : STD_LOGIC_VECTOR(7 DOWNTO 0):=(others =>'0');
-SIGNAL freq_in : STD_LOGIC:='0';
+SIGNAL a_reset : STD_LOGIC;
+SIGNAL clk_50M : STD_LOGIC;
+SIGNAL d_out : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL freq_in : STD_LOGIC;
 COMPONENT anemometre_component
 	PORT (
 	a_reset : IN STD_LOGIC;
@@ -59,8 +59,9 @@ vent_process : process
 begin
 
 
-freq_in <= not freq_in;
+freq_in <= not (freq_in);
 wait for 2 ms;
+
 
 
 end process;
@@ -78,7 +79,7 @@ clk_process : process
 begin
 
 
-clk_50M <= not clk_50M;
+clk_50M <= not (clk_50M);
 wait for 10 ns;
 
 end process;

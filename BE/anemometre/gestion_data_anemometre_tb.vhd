@@ -17,9 +17,9 @@
 -- suit user's needs .Comments are provided in each section to help the user  
 -- fill out necessary details.                                                
 -- ***************************************************************************
--- Generated on "11/08/2023 21:53:34"
+-- Generated on "11/12/2023 18:53:46"
                                                             
--- Vhdl Test Bench template for design  :  DivFreq
+-- Vhdl Test Bench template for design  :  counting
 -- 
 -- Simulation tool : ModelSim-Altera (VHDL)
 -- 
@@ -27,41 +27,51 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY DivFreq_vhd_tst IS
-END DivFreq_vhd_tst;
-ARCHITECTURE DivFreq_arch OF DivFreq_vhd_tst IS
+ENTITY counting_vhd_tst IS
+END counting_vhd_tst;
+ARCHITECTURE counting_arch OF counting_vhd_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL clk_1 : STD_LOGIC;
 SIGNAL clk_50M : STD_LOGIC;
+SIGNAL continu : STD_LOGIC;
+SIGNAL data_anemometre : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL data_valid : STD_LOGIC;
+SIGNAL freq_in : STD_LOGIC;
 SIGNAL reset : STD_LOGIC;
-COMPONENT DivFreq
+SIGNAL start_stop : STD_LOGIC;
+COMPONENT counting
 	PORT (
-	clk_1 : BUFFER STD_LOGIC;
 	clk_50M : IN STD_LOGIC;
-	reset : IN STD_LOGIC
+	continu : IN STD_LOGIC;
+	data_anemometre : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	data_valid : OUT STD_LOGIC;
+	freq_in : IN STD_LOGIC;
+	reset : IN STD_LOGIC;
+	start_stop : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
-	i1 : DivFreq
+	i1 : counting
 	PORT MAP (
 -- list connections between master ports and signals
-	clk_1 => clk_1,
 	clk_50M => clk_50M,
-	reset => reset
+	continu => continu,
+	data_anemometre => data_anemometre,
+	data_valid => data_valid,
+	freq_in => freq_in,
+	reset => reset,
+	start_stop => start_stop
 	);
-init : PROCESS                                               
--- variable declarations                                     
-BEGIN                                                        
-        -- code that executes only once                      
-WAIT;                                                       
-END PROCESS init;                                           
-always : PROCESS                                              
--- optional sensitivity list                                  
--- (        )                                                 
--- variable declarations                                      
-BEGIN                                                         
-        -- code executes for every event on sensitivity list  
-WAIT;                                                        
-END PROCESS always;                                          
-END DivFreq_arch;
+clk_stimulus : process
+begin
+   wait for 10 ns;
+		clk_50M <= not clk_50M;
+end process clk_stimulus;
+
+in_freq_anemometre_stimulus : process
+begin
+
+	wait for 500 ms;
+	freq_in <= not freq_in;
+end process in_freq_anemometre_stimulus;                                          
+END counting_arch;

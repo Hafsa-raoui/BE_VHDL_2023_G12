@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY divfreq
+set_global_assignment -name TOP_LEVEL_ENTITY counting
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:48:53  NOVEMBER 06, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -53,18 +53,23 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_location_assignment PIN_R8 -to clk_50M
+set_location_assignment PIN_J15 -to reset
+set_location_assignment PIN_D3 -to freq_in
+set_location_assignment PIN_A15 -to data_anemometre[0]
+set_location_assignment PIN_A13 -to data_anemometre[1]
+set_location_assignment PIN_B13 -to data_anemometre[2]
+set_location_assignment PIN_A11 -to data_anemometre[3]
+set_location_assignment PIN_D1 -to data_anemometre[4]
+set_location_assignment PIN_F3 -to data_anemometre[5]
+set_location_assignment PIN_B1 -to data_anemometre[6]
+set_location_assignment PIN_L3 -to data_anemometre[7]
+set_global_assignment -name BDF_FILE counting.bdf
+set_global_assignment -name VHDL_FILE count.vhd
+set_global_assignment -name VHDL_FILE Div_Freq/divfreq.vhd
+set_global_assignment -name VHDL_FILE gestion_data.vhd
+set_global_assignment -name VHDL_FILE memory.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE tb_DivFreq.vhd
-set_global_assignment -name VHDL_FILE tb_anemometre_component.vhd
-set_global_assignment -name VHDL_FILE anemometre_component.vhd
-set_global_assignment -name VHDL_FILE Div_Freq/divfreq.vhd
-set_global_assignment -name VHDL_FILE detect_front.vhd
-set_global_assignment -name VHDL_FILE compteur_front.vhd
-set_global_assignment -name VHDL_FILE basculeD.vhd
-set_global_assignment -name VHDL_FILE mae.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_location_assignment PIN_R8 -to clk_50M
-set_location_assignment PIN_J15 -to reset
-set_location_assignment PIN_A15 -to clk_1

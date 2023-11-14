@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity count is
+    port (
+        clk_1   : in std_logic;
+        freq_in : in std_logic; -- Corrected the colon to a semicolon
+        edge    : out std_logic_vector(7 downto 0)
+    );
+end count;
+
+architecture arc of count is
+    signal cpt : unsigned(1 downto 0) := "00";
+begin
+    process (clk_1, freq_in) is
+    begin
+        if rising_edge(clk_1) then
+            if rising_edge(freq_in) then
+                cpt <= cpt + 1; -- Increment the counter on rising edge of freq_in
+            else
+                cpt <= (others => '0');
+            end if;
+        end if;
+    end process;
+
+    edge <= cpt;
+end arc;

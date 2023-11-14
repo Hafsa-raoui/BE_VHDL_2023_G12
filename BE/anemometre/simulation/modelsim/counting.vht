@@ -17,9 +17,9 @@
 -- suit user's needs .Comments are provided in each section to help the user  
 -- fill out necessary details.                                                
 -- ***************************************************************************
--- Generated on "11/08/2023 21:53:34"
+-- Generated on "11/13/2023 21:46:29"
                                                             
--- Vhdl Test Bench template for design  :  DivFreq
+-- Vhdl Test Bench template for design  :  counting
 -- 
 -- Simulation tool : ModelSim-Altera (VHDL)
 -- 
@@ -27,27 +27,30 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY DivFreq_vhd_tst IS
-END DivFreq_vhd_tst;
-ARCHITECTURE DivFreq_arch OF DivFreq_vhd_tst IS
+ENTITY counting_vhd_tst IS
+END counting_vhd_tst;
+ARCHITECTURE counting_arch OF counting_vhd_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL clk_1 : STD_LOGIC;
 SIGNAL clk_50M : STD_LOGIC;
+SIGNAL data_anemometre : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL freq_in : STD_LOGIC;
 SIGNAL reset : STD_LOGIC;
-COMPONENT DivFreq
+COMPONENT counting
 	PORT (
-	clk_1 : BUFFER STD_LOGIC;
 	clk_50M : IN STD_LOGIC;
+	data_anemometre : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	freq_in : IN STD_LOGIC;
 	reset : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
-	i1 : DivFreq
+	i1 : counting
 	PORT MAP (
 -- list connections between master ports and signals
-	clk_1 => clk_1,
 	clk_50M => clk_50M,
+	data_anemometre => data_anemometre,
+	freq_in => freq_in,
 	reset => reset
 	);
 init : PROCESS                                               
@@ -64,4 +67,4 @@ BEGIN
         -- code executes for every event on sensitivity list  
 WAIT;                                                        
 END PROCESS always;                                          
-END DivFreq_arch;
+END counting_arch;
