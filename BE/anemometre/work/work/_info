@@ -48,7 +48,7 @@ R10
 R11
 R12
 Ecounting
-Z13 w1699908350
+Z13 w1700088983
 R2
 R3
 R0
@@ -60,9 +60,9 @@ VY;XoFfoVVHB9AQk5CF^_Y2
 !s100 1A6kNGW1fS@3^Pl5NOIHe1
 R6
 32
-Z16 !s110 1699909026
+Z16 !s110 1700091918
 !i10b 1
-Z17 !s108 1699909026.000000
+Z17 !s108 1700091917.000000
 Z18 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/counting.vhd|
 Z19 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/counting.vhd|
 !i113 1
@@ -99,57 +99,141 @@ VUE=0n[dd3:6FG5MFbTUW^0
 !s100 alMQRBH5bXRQ7dUgza]3B1
 R6
 32
-R16
+Z23 !s110 1699909026
 !i10b 1
-R17
-Z23 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_counting.vhd|
-Z24 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_counting.vhd|
+Z24 !s108 1699909026.000000
+Z25 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_counting.vhd|
+Z26 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_counting.vhd|
 !i113 1
 R11
 R12
 Acounting_arch
 R2
 R3
-Z25 DEx4 work 16 counting_vhd_tst 0 22 UE=0n[dd3:6FG5MFbTUW^0
+DEx4 work 16 counting_vhd_tst 0 22 UE=0n[dd3:6FG5MFbTUW^0
 l47
 L32
 VgMQhj@NbM:T;8^JIlgAd[0
 !s100 eEE^=If=a<PR4e88CD2c;0
 R6
 32
-R16
-!i10b 1
-R17
 R23
+!i10b 1
 R24
+R25
+R26
+!i113 1
+R11
+R12
+Edivfreq
+Z27 w1699813995
+Z28 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z29 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z30 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z31 8C:/Users/myhaj/OneDrive/Bureau/anemometre/divfreq.vhd
+Z32 FC:/Users/myhaj/OneDrive/Bureau/anemometre/divfreq.vhd
+l0
+L10
+VlPfX6Q;XDPhBj6B:j:TRU3
+!s100 Hnbl9Li1@06V@=52d`N=13
+R6
+32
+Z33 !s110 1700087440
+!i10b 1
+Z34 !s108 1700087440.000000
+Z35 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/divfreq.vhd|
+Z36 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/divfreq.vhd|
+!i113 1
+R11
+R12
+Aarch
+R28
+R29
+R30
+R2
+R3
+DEx4 work 7 divfreq 0 22 lPfX6Q;XDPhBj6B:j:TRU3
+l24
+L21
+Vh_Fn5K1iEZi4Q3z`0JP2`0
+!s100 `:CnZYi7HEHW[X]GXXZzf2
+R6
+32
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R11
+R12
+Edivfreq_vhd_tst
+Z37 w1700085613
+R2
+R3
+R0
+Z38 8C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_DivFreq.vhd
+Z39 FC:/Users/myhaj/OneDrive/Bureau/anemometre/tb_DivFreq.vhd
+l0
+L30
+VoC:7:XzWAM2XPe@QOoo6_2
+!s100 _2MmVOG`9QLIHTPno512Z1
+R6
+32
+Z40 !s110 1700087072
+!i10b 1
+Z41 !s108 1700087072.000000
+Z42 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_DivFreq.vhd|
+Z43 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_DivFreq.vhd|
+!i113 1
+R11
+R12
+Adivfreq_arch
+R2
+R3
+DEx4 work 15 divfreq_vhd_tst 0 22 oC:7:XzWAM2XPe@QOoo6_2
+l46
+L32
+VKOhVLP@M7;V^<ljEMDl_G3
+!s100 1?gmX:>_BUD;`40SbGTNN0
+R6
+32
+R40
+!i10b 1
+R41
+R42
+R43
 !i113 1
 R11
 R12
 Egestion_data
-Z26 w1699745622
-Z27 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z28 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z44 w1699745622
+R29
+R28
 R2
 R3
 R0
-Z29 8C:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data.vhd
-Z30 FC:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data.vhd
+Z45 8C:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data.vhd
+Z46 FC:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data.vhd
 l0
 L7
 Vc^XA_SR<kHOB<EaP]4GOR1
 !s100 G[VF1M8a9lk=zfY<5^XJL3
 R6
 32
-Z31 !s110 1699812711
+Z47 !s110 1699812711
 !i10b 1
-Z32 !s108 1699812711.000000
-Z33 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data.vhd|
-Z34 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data.vhd|
+Z48 !s108 1699812711.000000
+Z49 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data.vhd|
+Z50 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data.vhd|
 !i113 1
 R11
 R12
 Aarch
-R27
+R29
 R28
 R2
 R3
@@ -160,39 +244,39 @@ V`@eGdC<O6?OGn:z>io7L>2
 !s100 6<Xl_mlP@TB90:KZDG7X<1
 R6
 32
-R31
+R47
 !i10b 1
-R32
-R33
-R34
+R48
+R49
+R50
 !i113 1
 R11
 R12
 Egestion_data_anemometre_tb
-Z35 w1699811159
-R27
+Z51 w1699811159
+R29
 R28
 R2
 R3
 R0
-Z36 8C:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data_anemometre_tb.vhd
-Z37 FC:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data_anemometre_tb.vhd
+Z52 8C:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data_anemometre_tb.vhd
+Z53 FC:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data_anemometre_tb.vhd
 l0
 L7
 VIaRJNRV:V2[alKF^937>J1
 !s100 @M1=NGRo>U;>f4]jNnhI[1
 R6
 32
-Z38 !s110 1699811368
+Z54 !s110 1699811368
 !i10b 1
-Z39 !s108 1699811368.000000
-Z40 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data_anemometre_tb.vhd|
-Z41 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data_anemometre_tb.vhd|
+Z55 !s108 1699811368.000000
+Z56 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data_anemometre_tb.vhd|
+Z57 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/gestion_data_anemometre_tb.vhd|
 !i113 1
 R11
 R12
 Aarch
-R27
+R29
 R28
 R2
 R3
@@ -203,38 +287,38 @@ Ve=c^Vnn<`m9PZ<LUCEn2j0
 !s100 e89gj[^MJ;PGc7UAK:E]=3
 R6
 32
-R38
+R54
 !i10b 1
-R39
-R40
-R41
+R55
+R56
+R57
 !i113 1
 R11
 R12
 Esquare_wave
-Z42 w1699717547
-Z43 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z58 w1699717547
+R30
 R2
 R3
 R0
-Z44 8C:/Users/myhaj/OneDrive/Bureau/anemometre/square_wave.vhd
-Z45 FC:/Users/myhaj/OneDrive/Bureau/anemometre/square_wave.vhd
+Z59 8C:/Users/myhaj/OneDrive/Bureau/anemometre/square_wave.vhd
+Z60 FC:/Users/myhaj/OneDrive/Bureau/anemometre/square_wave.vhd
 l0
 L5
 V2j:Gn97?2il>8o3;8MgfD3
 !s100 3E64Y[mJ_Yhc6dV3:WN^I3
 R6
 32
-Z46 !s110 1699721339
+Z61 !s110 1699721339
 !i10b 1
-Z47 !s108 1699721339.000000
-Z48 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/square_wave.vhd|
-Z49 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/square_wave.vhd|
+Z62 !s108 1699721339.000000
+Z63 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/square_wave.vhd|
+Z64 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/square_wave.vhd|
 !i113 1
 R11
 R12
 Aarch
-R43
+R30
 R2
 R3
 DEx4 work 11 square_wave 0 22 2j:Gn97?2il>8o3;8MgfD3
@@ -244,21 +328,21 @@ VPAbJzlRDjF0;mN:02dHj02
 !s100 UFK[kfzLXm0mWf]iHZdQh2
 R6
 32
-R46
+R61
 !i10b 1
-R47
-R48
-R49
+R62
+R63
+R64
 !i113 1
 R11
 R12
 Etb_anemometre_component
-Z50 w1699474422
+Z65 w1699474422
 R2
 R3
 R0
-Z51 8C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_anemometre_component.vhd
-Z52 FC:/Users/myhaj/OneDrive/Bureau/anemometre/tb_anemometre_component.vhd
+Z66 8C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_anemometre_component.vhd
+Z67 FC:/Users/myhaj/OneDrive/Bureau/anemometre/tb_anemometre_component.vhd
 l0
 L30
 Vm?R?<oKO76hO]?mI^o;kC3
@@ -268,8 +352,8 @@ R6
 R7
 !i10b 1
 R8
-Z53 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_anemometre_component.vhd|
-Z54 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_anemometre_component.vhd|
+Z68 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_anemometre_component.vhd|
+Z69 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_anemometre_component.vhd|
 !i113 1
 R11
 R12
@@ -286,35 +370,113 @@ R6
 R7
 !i10b 1
 R8
-R53
-R54
+R68
+R69
+!i113 1
+R11
+R12
+Etb_counting
+Z70 w1700091901
+R2
+R3
+R0
+R21
+R22
+l0
+L30
+VN[@E<6`_j7a0YQm:C2N`l3
+!s100 JU<E_XAeSg1dEEACB0l<i3
+R6
+32
+R16
+!i10b 1
+Z71 !s108 1700091918.000000
+R25
+R26
+!i113 1
+R11
+R12
+Acounting_arch
+R2
+R3
+Z72 DEx4 work 11 tb_counting 0 22 N[@E<6`_j7a0YQm:C2N`l3
+l49
+L32
+V`4T^A_mH>=oo`a:5IcOX;3
+!s100 CPa<M7QdXeK_=JKnZjgkh0
+R6
+32
+R16
+!i10b 1
+R71
+R25
+R26
+!i113 1
+R11
+R12
+Etb_divfreq
+Z73 w1700087234
+R2
+R3
+R0
+R38
+R39
+l0
+L30
+V2E:6R<IX3dK@EXz><nY:B3
+!s100 2:5fI_5E[ea7Ubggmj7KC0
+R6
+32
+Z74 !s110 1700087441
+!i10b 1
+Z75 !s108 1700087441.000000
+R42
+R43
+!i113 1
+R11
+R12
+Adivfreq_arch
+R2
+R3
+DEx4 work 10 tb_divfreq 0 22 2E:6R<IX3dK@EXz><nY:B3
+l46
+L32
+VgRn7AR@U[JbekCgo>0oLL0
+!s100 :ka[4HSf_NlE>j=<J[ncY2
+R6
+32
+R74
+!i10b 1
+R75
+R42
+R43
 !i113 1
 R11
 R12
 Etb_square_wave
-Z55 w1699721185
-R43
+Z76 w1699721185
+R30
 R2
 R3
 R0
-Z56 8C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_square_wave.vhd
-Z57 FC:/Users/myhaj/OneDrive/Bureau/anemometre/tb_square_wave.vhd
+Z77 8C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_square_wave.vhd
+Z78 FC:/Users/myhaj/OneDrive/Bureau/anemometre/tb_square_wave.vhd
 l0
 L5
 V<_gdia`M50`;W?D_S]EW51
 !s100 ]Q<eL6YU1>hX8[4VkPz1e3
 R6
 32
-Z58 !s110 1699721340
+Z79 !s110 1699721340
 !i10b 1
-Z59 !s108 1699721340.000000
-Z60 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_square_wave.vhd|
-Z61 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_square_wave.vhd|
+Z80 !s108 1699721340.000000
+Z81 !s90 -reportprogress|300|-work|work|C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_square_wave.vhd|
+Z82 !s107 C:/Users/myhaj/OneDrive/Bureau/anemometre/tb_square_wave.vhd|
 !i113 1
 R11
 R12
 Atb_arch
-R43
+R30
 R2
 R3
 DEx4 work 14 tb_square_wave 0 22 <_gdia`M50`;W?D_S]EW51
@@ -324,16 +486,16 @@ V3^B^b:a8GgEeDg1mk?^l_0
 !s100 N;P3Vld79kdaFE^TEE<nb0
 R6
 32
-R58
+R79
 !i10b 1
-R59
-R60
-R61
+R80
+R81
+R82
 !i113 1
 R11
 R12
 Abehavioral
-R43
+R30
 R2
 R3
 DEx4 work 14 tb_square_wave 0 22 XkXFB19gL5OoKO?j;>b0:1
@@ -346,8 +508,8 @@ R6
 !s110 1699717684
 !i10b 1
 !s108 1699717684.000000
-R60
-R61
+R81
+R82
 !i113 1
 R11
 R12

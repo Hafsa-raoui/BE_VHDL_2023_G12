@@ -1,0 +1,7 @@
+
+State Machine - |counting|count:inst1|pr_state
+Name pr_state.comptage pr_state.Waitack pr_state.startcount pr_state.Standby 
+pr_state.Standby 0 0 0 0 
+pr_state.startcount 0 0 1 1 
+pr_state.Waitack 0 1 0 1 
+pr_state.comptage 1 0 0 1 

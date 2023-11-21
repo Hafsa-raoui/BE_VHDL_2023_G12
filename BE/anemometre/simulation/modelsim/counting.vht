@@ -17,7 +17,7 @@
 -- suit user's needs .Comments are provided in each section to help the user  
 -- fill out necessary details.                                                
 -- ***************************************************************************
--- Generated on "11/13/2023 21:46:29"
+-- Generated on "11/16/2023 00:11:37"
                                                             
 -- Vhdl Test Bench template for design  :  counting
 -- 

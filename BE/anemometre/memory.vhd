@@ -7,30 +7,59 @@ use ieee.std_logic_unsigned.all;
 ---- Entity -----------------------------------
 entity memory is 
 	port(
-			clk_1 :	in std_logic;
+			clk_50 :	in std_logic;
 			rst		: in std_logic;
-			--load		: in std_logic;
 			data_in	: in std_logic_vector(7 downto 0);
 			data_out	: out std_logic_vector(7 downto 0)
 			);
 end entity;
 
 architecture arch of memory is
-	signal s_data_out : std_logic_vector(7 downto 0);
+	signal s_data_out, s_data_in : std_logic_vector(7 downto 0);
+	signal is_bit_set : integer;
+	signal last_data : std_logic_vector(7 downto 0);
+	signal clk_counter: natural range 0 to 499_999_999;
+	--signal clk_counter: integer := 0;
 
 begin
-		process (clk_1, rst)
+		process(clk_50,rst)
 		begin
-			if rst = '1' then 
+			if rst = '0' then 
 				s_data_out <= (others => '0');
-			elsif rising_edge(clk_1) then
-				s_data_out <= data_in;
-			end if;
-		end process;
+				last_data <= (others => '0');
+				clk_counter <= 0;
+			elsif rising_edge(clk_50) then
+				--if continu ='1' then
+				 if ((data_in and  "11111111") /= "00000000") then
+						last_data <= data_in;
+				 end if;
 
-data_out <= s_data_out;
+					s_data_in <= not data_in ;
+					
+						 end if;
+						
+		end process;
+		
+		
+--	process (data_in)
+
+data_out <=  (s_data_in and last_data) ;
 
 
 
 
 end arch;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -35,8 +35,8 @@ begin
 		then
 		
 		--évolution synchrone 25 millions de front montant (Objectif: comptabilisé les signaux clk in). Une fois terminé la comtabilisition, basculement de la sortie. 
-		if compteur < 2500000 then compteur <= compteur +1;  -- pour une période 100us
-		--if compteur < 25000000 then compteur <= compteur +1; -- pour une période de 1s
+		--if compteur < 2500000 then compteur <= compteur +1;  -- pour une période 100us
+		if compteur < 25000000 then compteur <= compteur +1; -- pour une période de 1s
 		--if compteur < 25 then compteur <= compteur +1;
 		else compteur <= 1; end if; -- remise à 0 compteur
 		
