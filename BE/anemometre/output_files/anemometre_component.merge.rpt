@@ -1,0 +1,386 @@
+Partition Merge report for anemometre_component
+Thu Nov 16 09:11:14 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Connections to In-System Debugging Instance "auto_signaltap_0"
+  5. Partition Merge Partition Statistics
+  6. Partition Merge Partition Pin Processing
+  7. Partition Merge Resource Usage Summary
+  8. Partition Merge RAM Summary
+  9. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Partition Merge Summary                                                          ;
++------------------------------------+---------------------------------------------+
+; Partition Merge Status             ; Successful - Thu Nov 16 09:11:14 2023       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; anemometre_component                        ;
+; Top-level Entity Name              ; counting                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,213                                       ;
+;     Total combinational functions  ; 698                                         ;
+;     Dedicated logic registers      ; 926                                         ;
+; Total registers                    ; 926                                         ;
+; Total pins                         ; 11                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 139,264                                     ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                            ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used ; Netlist Type Requested ; Partition Contents             ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Top                            ; User-created   ; Source File       ; Source File            ;                                ;
+; sld_hub:auto_hub               ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_hub:auto_hub               ;
+; sld_signaltap:auto_signaltap_0 ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_signaltap:auto_signaltap_0 ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File       ; Source File            ; hard_block:auto_generated_inst ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                                ;
++------------------------------+--------------+-----------+--------------------------------+-------------------+-------------------------------------+------------------------------------------------------------------------------------------+
+; Name                         ; Type         ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                   ; Details                                                                                  ;
++------------------------------+--------------+-----------+--------------------------------+-------------------+-------------------------------------+------------------------------------------------------------------------------------------+
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|gnd         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; auto_signaltap_0|vcc         ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                      ;
+; clk_50M                      ; post-fitting ; connected ; Top                            ; post-synthesis    ; clk_50M                             ; N/A                                                                                      ;
+; clk_50M~input                ; post-fitting ; connected ; Top                            ; post-synthesis    ; clk_50M                             ; N/A                                                                                      ;
+; clk_50M~input                ; post-fitting ; connected ; Top                            ; post-synthesis    ; clk_50M                             ; N/A                                                                                      ;
+; clk_50M~inputclkctrl         ; post-fitting ; connected ; Top                            ; post-synthesis    ; clk_50M                             ; N/A                                                                                      ;
+; clk_50M~inputclkctrl         ; post-fitting ; connected ; Top                            ; post-synthesis    ; clk_50M                             ; N/A                                                                                      ;
+; count:inst1|cpt1[0]~7        ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[0]~7               ; N/A                                                                                      ;
+; count:inst1|cpt1[0]~7        ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[0]~7               ; N/A                                                                                      ;
+; count:inst1|cpt1[1]~9        ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[1]~9               ; N/A                                                                                      ;
+; count:inst1|cpt1[1]~9        ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[1]~9               ; N/A                                                                                      ;
+; count:inst1|cpt1[2]~11       ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[2]~11              ; N/A                                                                                      ;
+; count:inst1|cpt1[2]~11       ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[2]~11              ; N/A                                                                                      ;
+; count:inst1|cpt1[3]~13       ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[3]~13              ; N/A                                                                                      ;
+; count:inst1|cpt1[3]~13       ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[3]~13              ; N/A                                                                                      ;
+; count:inst1|cpt1[4]~15       ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[4]~15              ; N/A                                                                                      ;
+; count:inst1|cpt1[4]~15       ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[4]~15              ; N/A                                                                                      ;
+; count:inst1|cpt1[5]~17       ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[5]~17              ; N/A                                                                                      ;
+; count:inst1|cpt1[5]~17       ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[5]~17              ; N/A                                                                                      ;
+; count:inst1|cpt1[6]~19       ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[6]~19              ; N/A                                                                                      ;
+; count:inst1|cpt1[6]~19       ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt1[6]~19              ; N/A                                                                                      ;
+; count:inst1|cpt3[1]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[1]                 ; N/A                                                                                      ;
+; count:inst1|cpt3[1]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[1]                 ; N/A                                                                                      ;
+; count:inst1|cpt3[1]~feeder   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|cpt3[1]~feeder   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|cpt3[2]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[2]                 ; N/A                                                                                      ;
+; count:inst1|cpt3[2]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[2]                 ; N/A                                                                                      ;
+; count:inst1|cpt3[2]~feeder   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|cpt3[2]~feeder   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|cpt3[3]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[3]                 ; N/A                                                                                      ;
+; count:inst1|cpt3[3]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[3]                 ; N/A                                                                                      ;
+; count:inst1|cpt3[3]~feeder   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|cpt3[3]~feeder   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|cpt3[4]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[4]                 ; N/A                                                                                      ;
+; count:inst1|cpt3[4]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[4]                 ; N/A                                                                                      ;
+; count:inst1|cpt3[4]~feeder   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|cpt3[4]~feeder   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|cpt3[5]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[5]                 ; N/A                                                                                      ;
+; count:inst1|cpt3[5]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[5]                 ; N/A                                                                                      ;
+; count:inst1|cpt3[5]~feeder   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|cpt3[5]~feeder   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|cpt3[6]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[6]                 ; N/A                                                                                      ;
+; count:inst1|cpt3[6]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[6]                 ; N/A                                                                                      ;
+; count:inst1|cpt3[6]~feeder   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|cpt3[6]~feeder   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|cpt3[7]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[7]                 ; N/A                                                                                      ;
+; count:inst1|cpt3[7]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|cpt3[7]                 ; N/A                                                                                      ;
+; count:inst1|s_cpt1[0]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|s_cpt1[0]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|s_cpt1[1]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|s_cpt1[1]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|s_cpt1[2]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|s_cpt1[2]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|s_cpt1[3]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|s_cpt1[3]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|s_cpt1[4]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|s_cpt1[4]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|s_cpt1[5]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|s_cpt1[5]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|s_cpt1[6]~0      ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|s_cpt1[6]~0             ; N/A                                                                                      ;
+; count:inst1|s_cpt1[6]~0      ; post-fitting ; connected ; Top                            ; post-synthesis    ; count:inst1|s_cpt1[6]~0             ; N/A                                                                                      ;
+; count:inst1|s_cpt1[6]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; count:inst1|s_cpt1[6]~feeder ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; freq_in                      ; post-fitting ; connected ; Top                            ; post-synthesis    ; freq_in                             ; N/A                                                                                      ;
+; freq_in                      ; post-fitting ; connected ; Top                            ; post-synthesis    ; freq_in                             ; N/A                                                                                      ;
+; freq_in                      ; post-fitting ; connected ; Top                            ; post-synthesis    ; freq_in                             ; N/A                                                                                      ;
+; freq_in~input                ; post-fitting ; connected ; Top                            ; post-synthesis    ; freq_in                             ; N/A                                                                                      ;
+; freq_in~input                ; post-fitting ; connected ; Top                            ; post-synthesis    ; freq_in                             ; N/A                                                                                      ;
+; reset                        ; post-fitting ; connected ; Top                            ; post-synthesis    ; reset                               ; N/A                                                                                      ;
+; reset                        ; post-fitting ; connected ; Top                            ; post-synthesis    ; reset                               ; N/A                                                                                      ;
+; reset~input                  ; post-fitting ; connected ; Top                            ; post-synthesis    ; reset                               ; N/A                                                                                      ;
+; reset~input                  ; post-fitting ; connected ; Top                            ; post-synthesis    ; reset                               ; N/A                                                                                      ;
++------------------------------+--------------+-----------+--------------------------------+-------------------+-------------------------------------+------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                                                                                    ;
++---------------------------------------------+------+------------------+--------------------------------+--------------------------------+
+; Statistic                                   ; Top  ; sld_hub:auto_hub ; sld_signaltap:auto_signaltap_0 ; hard_block:auto_generated_inst ;
++---------------------------------------------+------+------------------+--------------------------------+--------------------------------+
+; Estimated Total logic elements              ; 105  ; 154              ; 956                            ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Total combinational functions               ; 91   ; 127              ; 480                            ; 0                              ;
+; Logic element usage by number of LUT inputs ;      ;                  ;                                ;                                ;
+;     -- 4 input functions                    ; 46   ; 55               ; 200                            ; 0                              ;
+;     -- 3 input functions                    ; 3    ; 36               ; 147                            ; 0                              ;
+;     -- <=2 input functions                  ; 42   ; 36               ; 133                            ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Logic elements by mode                      ;      ;                  ;                                ;                                ;
+;     -- normal mode                          ; 54   ; 119              ; 392                            ; 0                              ;
+;     -- arithmetic mode                      ; 37   ; 8                ; 88                             ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Total registers                             ; 54   ; 91               ; 781                            ; 0                              ;
+;     -- Dedicated logic registers            ; 54   ; 91               ; 781                            ; 0                              ;
+;     -- I/O registers                        ; 0    ; 0                ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Virtual pins                                ; 0    ; 0                ; 0                              ; 0                              ;
+; I/O pins                                    ; 11   ; 0                ; 0                              ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0    ; 0                ; 0                              ; 0                              ;
+; Total memory bits                           ; 0    ; 0                ; 139264                         ; 0                              ;
+; Total RAM block bits                        ; 0    ; 0                ; 0                              ; 0                              ;
+; JTAG                                        ; 1    ; 0                ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Connections                                 ;      ;                  ;                                ;                                ;
+;     -- Input Connections                    ; 1    ; 134              ; 1132                           ; 0                              ;
+;     -- Registered Input Connections         ; 0    ; 102              ; 884                            ; 0                              ;
+;     -- Output Connections                   ; 1046 ; 187              ; 34                             ; 0                              ;
+;     -- Registered Output Connections        ; 14   ; 187              ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Internal Connections                        ;      ;                  ;                                ;                                ;
+;     -- Total Connections                    ; 1515 ; 880              ; 4872                           ; 0                              ;
+;     -- Registered Connections               ; 170  ; 651              ; 3340                           ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; External Connections                        ;      ;                  ;                                ;                                ;
+;     -- Top                                  ; 0    ; 123              ; 924                            ; 0                              ;
+;     -- sld_hub:auto_hub                     ; 123  ; 20               ; 178                            ; 0                              ;
+;     -- sld_signaltap:auto_signaltap_0       ; 924  ; 178              ; 64                             ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0    ; 0                ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Partition Interface                         ;      ;                  ;                                ;                                ;
+;     -- Input Ports                          ; 6    ; 45               ; 171                            ; 0                              ;
+;     -- Output Ports                         ; 9    ; 62               ; 83                             ; 0                              ;
+;     -- Bidir Ports                          ; 0    ; 0                ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Registered Ports                            ;      ;                  ;                                ;                                ;
+;     -- Registered Input Ports               ; 0    ; 4                ; 75                             ; 0                              ;
+;     -- Registered Output Ports              ; 0    ; 29               ; 69                             ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Port Connectivity                           ;      ;                  ;                                ;                                ;
+;     -- Input Ports driven by GND            ; 0    ; 0                ; 41                             ; 0                              ;
+;     -- Output Ports driven by GND           ; 0    ; 28               ; 2                              ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0    ; 0                ; 17                             ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0    ; 0                ; 1                              ; 0                              ;
+;     -- Input Ports with no Source           ; 0    ; 25               ; 37                             ; 0                              ;
+;     -- Output Ports with no Source          ; 0    ; 0                ; 0                              ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0    ; 30               ; 51                             ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0    ; 29               ; 71                             ; 0                              ;
++---------------------------------------------+------+------------------+--------------------------------+--------------------------------+
+Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
+
+
++----------------------------------------------------------------------------------------+
+; Partition Merge Partition Pin Processing                                               ;
++-----------------------------------+-----------+---------------+----------+-------------+
+; Name                              ; Partition ; Type          ; Location ; Status      ;
++-----------------------------------+-----------+---------------+----------+-------------+
+; altera_reserved_tck               ; Top       ; Input Port    ; n/a      ;             ;
+;     -- altera_reserved_tck        ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tck~input  ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; altera_reserved_tdi               ; Top       ; Input Port    ; n/a      ;             ;
+;     -- altera_reserved_tdi        ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tdi~input  ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; altera_reserved_tdo               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- altera_reserved_tdo        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tdo~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; altera_reserved_tms               ; Top       ; Input Port    ; n/a      ;             ;
+;     -- altera_reserved_tms        ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tms~input  ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; clk_50M                           ; Top       ; Input Port    ; n/a      ;             ;
+;     -- clk_50M                    ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- clk_50M~input              ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; data_anemometre[0]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- data_anemometre[0]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- data_anemometre[0]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; data_anemometre[1]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- data_anemometre[1]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- data_anemometre[1]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; data_anemometre[2]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- data_anemometre[2]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- data_anemometre[2]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; data_anemometre[3]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- data_anemometre[3]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- data_anemometre[3]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; data_anemometre[4]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- data_anemometre[4]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- data_anemometre[4]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; data_anemometre[5]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- data_anemometre[5]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- data_anemometre[5]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; data_anemometre[6]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- data_anemometre[6]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- data_anemometre[6]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; data_anemometre[7]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- data_anemometre[7]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- data_anemometre[7]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; freq_in                           ; Top       ; Input Port    ; n/a      ;             ;
+;     -- freq_in                    ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- freq_in~input              ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; reset                             ; Top       ; Input Port    ; n/a      ;             ;
+;     -- reset                      ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- reset~input                ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
++-----------------------------------+-----------+---------------+----------+-------------+
+
+
++------------------------------------------------------------------------+
+; Partition Merge Resource Usage Summary                                 ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 1,213                    ;
+;                                             ;                          ;
+; Total combinational functions               ; 698                      ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 301                      ;
+;     -- 3 input functions                    ; 186                      ;
+;     -- <=2 input functions                  ; 211                      ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 565                      ;
+;     -- arithmetic mode                      ; 133                      ;
+;                                             ;                          ;
+; Total registers                             ; 926                      ;
+;     -- Dedicated logic registers            ; 926                      ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 11                       ;
+; Total memory bits                           ; 139264                   ;
+;                                             ;                          ;
+; Embedded Multiplier 9-bit elements          ; 0                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
+; Maximum fan-out                             ; 499                      ;
+; Total fan-out                               ; 5981                     ;
+; Average fan-out                             ; 3.54                     ;
++---------------------------------------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                                                                                                 ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_cb24:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 4096         ; 34           ; 4096         ; 34           ; 139264 ; None ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Partition Merge
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Nov 16 09:11:12 2023
+Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off anemometre_component -c anemometre_component --merge=on
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (35007): Using synthesis netlist for partition "Top"
+Info (35007): Using synthesis netlist for partition "sld_hub:auto_hub"
+Info (35007): Using synthesis netlist for partition "sld_signaltap:auto_signaltap_0"
+Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 76 of its 102 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 26 missing sources or connections.
+Info (35002): Resolved and merged 3 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Critical Warning (138067): Current license file does not support incremental compilation. The Quartus Prime software removes all the user-specified design partitions in the design automatically.
+Info (21057): Implemented 1290 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 1240 logic cells
+    Info (21064): Implemented 34 RAM segments
+Info: Quartus Prime Partition Merge was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4690 megabytes
+    Info: Processing ended: Thu Nov 16 09:11:15 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+
