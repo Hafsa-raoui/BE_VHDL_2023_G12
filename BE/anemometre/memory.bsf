@@ -26,8 +26,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "clk_50" (rect 0 0 25 12)(font "Arial" ))
-		(text "clk_50" (rect 21 27 46 39)(font "Arial" ))
+		(text "clk_1" (rect 0 0 20 12)(font "Arial" ))
+		(text "clk_1" (rect 21 27 41 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 1))
 	)
 	(port
@@ -40,16 +40,9 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "continu" (rect 0 0 27 12)(font "Arial" ))
-		(text "continu" (rect 21 59 48 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 1))
-	)
-	(port
-		(pt 0 80)
-		(input)
 		(text "data_in[7..0]" (rect 0 0 48 12)(font "Arial" ))
-		(text "data_in[7..0]" (rect 21 75 69 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
+		(text "data_in[7..0]" (rect 21 59 69 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
 		(pt 208 32)

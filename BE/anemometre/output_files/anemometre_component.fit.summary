@@ -1,16 +1,16 @@
-Fitter Status : Successful - Tue Nov 21 18:47:15 2023
+Fitter Status : Successful - Mon Nov 27 11:35:12 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : anemometre_component
 Top-level Entity Name : counting
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 1,159 / 22,320 ( 5 % )
-    Total combinational functions : 667 / 22,320 ( 3 % )
-    Dedicated logic registers : 926 / 22,320 ( 4 % )
-Total registers : 926
-Total pins : 13 / 154 ( 8 % )
+Total logic elements : 1,025 / 22,320 ( 5 % )
+    Total combinational functions : 726 / 22,320 ( 3 % )
+    Dedicated logic registers : 778 / 22,320 ( 3 % )
+Total registers : 778
+Total pins : 15 / 154 ( 10 % )
 Total virtual pins : 0
-Total memory bits : 196,608 / 608,256 ( 32 % )
+Total memory bits : 61,440 / 608,256 ( 10 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

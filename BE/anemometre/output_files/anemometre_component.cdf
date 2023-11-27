@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("C:/Users/myhaj/OneDrive/Bureau/anemometre/output_files/") File("anemometre_component.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22F17) Path("C:/Users/myhaj/OneDrive/Bureau/27_11/anemometre/output_files/") File("anemometre_component.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

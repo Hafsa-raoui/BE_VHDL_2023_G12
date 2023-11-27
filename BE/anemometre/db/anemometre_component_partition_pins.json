@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "data_valid",
+					"strict" : false
+				},
+				{
 					"name" : "data_anemometre[7]",
 					"strict" : false
 				},
@@ -36,11 +40,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "data_anemometre[0]",
+					"strict" : false
+				},
+				{
 					"name" : "clk_50M",
 					"strict" : false
 				},
 				{
 					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "continu",
+					"strict" : false
+				},
+				{
+					"name" : "start_stop",
 					"strict" : false
 				},
 				{

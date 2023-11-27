@@ -7,7 +7,7 @@ use ieee.std_logic_arith.all;
 entity gestion_data is
 
 port ( 
-		clk_50M			: in std_logic;
+		clk_1			: in std_logic;
 		continu			: in std_logic;
 		rst				: in std_logic;
 		start_stop		: in std_logic;
@@ -24,10 +24,10 @@ signal signal_out   : std_logic_vector(7 downto 0);
 
 begin 
 
-		process(clk_50M,rst,continu,start_stop)
+		process(clk_1,rst,continu,start_stop)
 		
 		begin
-		if rising_edge(clk_50M) then
+		if rising_edge(clk_1) then
 			if (rst = '0') then
 				signal_valid <= '0';
 				signal_out <= (others=> '0');
