@@ -1,0 +1,27 @@
+08:27:17 **** Incremental Build of configuration Nios II for project mon_sopc ****
+make all 
+Info: Building ../mon_sopc_bsp/
+D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../mon_sopc_bsp/
+[BSP build complete]
+Info: Compiling pwm.c to obj/default/pwm.o
+nios2-elf-gcc -xc -MP -MMD -c -I../mon_sopc_bsp//HAL/inc -I../mon_sopc_bsp/ -I../mon_sopc_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/pwm.o pwm.c
+Info: Linking mon_sopc.elf
+nios2-elf-g++  -T'../mon_sopc_bsp//linker.x' -msys-crt0='../mon_sopc_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../mon_sopc_bsp/  -msmallc  -Wl,-Map=mon_sopc.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o mon_sopc.elf obj/default/pwm.o -lm -msys-lib=m
+nios2-elf-insert mon_sopc.elf --thread_model hal --cpu_name CPU --qsys true --simulation_enabled false --id 0 --sidp 0x11070 --timestamp 1701892926 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name sopc_compteur --quartus_project_dir "C:/Users/myhaj/OneDrive/Bureau/sopc_compteur" --jdi ../..//output_files/sopc_compteur.jdi --sopcinfo C:/Users/myhaj/OneDrive/Bureau/sopc_compteur/software/mon_sopc_bsp/../../sopc_compteur.sopcinfo
+Info: (mon_sopc.elf) 3636 Bytes program size (code + initialized data).
+Info:                16 KBytes free for stack + heap.
+Info: Creating mon_sopc.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source mon_sopc.elf >mon_sopc.objdump
+[mon_sopc build complete]
+08:27:36 **** Build of configuration Nios II for project mon_sopc ****
+make all 
+Info: Building ../mon_sopc_bsp/
+D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../mon_sopc_bsp/
+[BSP build complete]
+[mon_sopc build complete]
+08:27:38 **** Incremental Build of configuration Nios II for project mon_sopc ****
+make all 
+Info: Building ../mon_sopc_bsp/
+D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../mon_sopc_bsp/
+[BSP build complete]
+[mon_sopc build complete]
