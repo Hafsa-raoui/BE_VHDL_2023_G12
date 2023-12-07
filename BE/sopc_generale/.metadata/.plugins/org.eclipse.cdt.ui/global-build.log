@@ -1,0 +1,27 @@
+17:53:52 **** Incremental Build of configuration Nios II for project sopc_general ****
+make all 
+Info: Building ../sopc_general_bsp/
+D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../sopc_general_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../sopc_general_bsp//HAL/inc -I../sopc_general_bsp/ -I../sopc_general_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+Info: Linking sopc_general.elf
+nios2-elf-g++  -T'../sopc_general_bsp//linker.x' -msys-crt0='../sopc_general_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../sopc_general_bsp/  -msmallc  -Wl,-Map=sopc_general.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o sopc_general.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert sopc_general.elf --thread_model hal --cpu_name CPU --qsys true --simulation_enabled false --id 0 --sidp 0x11090 --timestamp 1701966132 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name sopc_anemometre --quartus_project_dir "C:/Users/myhaj/OneDrive/Bureau/sopc_generale" --jdi ../..//output_files/sopc_generale.jdi --sopcinfo C:/Users/myhaj/OneDrive/Bureau/sopc_generale/software/sopc_general_bsp/../../sopc_anemometre.sopcinfo
+Info: (sopc_general.elf) 3724 Bytes program size (code + initialized data).
+Info:                    16 KBytes free for stack + heap.
+Info: Creating sopc_general.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sopc_general.elf >sopc_general.objdump
+[sopc_general build complete]
+17:55:45 **** Build of configuration Nios II for project sopc_general ****
+make all 
+Info: Building ../sopc_general_bsp/
+D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../sopc_general_bsp/
+[BSP build complete]
+[sopc_general build complete]
+17:55:50 **** Incremental Build of configuration Nios II for project sopc_general ****
+make all 
+Info: Building ../sopc_general_bsp/
+D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../sopc_general_bsp/
+[BSP build complete]
+[sopc_general build complete]

@@ -1,0 +1,26 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst sopc_anemometre.CPU -pg 1 -lvl 1 -y 90
+preplace inst sopc_anemometre.clk_0 -pg 1 -lvl 2 -y 240
+preplace inst sopc_anemometre.LEDS -pg 1 -lvl 3 -y 390
+preplace inst sopc_anemometre.JTAG_UART -pg 1 -lvl 3 -y 30
+preplace inst sopc_anemometre.avalon_anemo_0 -pg 1 -lvl 3 -y 590
+preplace inst sopc_anemometre -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst sopc_anemometre.CPU.cpu -pg 1
+preplace inst sopc_anemometre.CPU.reset_bridge -pg 1
+preplace inst sopc_anemometre.BOUTONS -pg 1 -lvl 3 -y 290
+preplace inst sopc_anemometre.SYST_ID -pg 1 -lvl 3 -y 210
+preplace inst sopc_anemometre.RAM -pg 1 -lvl 3 -y 130
+preplace inst sopc_anemometre.avalon_pwm_0 -pg 1 -lvl 3 -y 490
+preplace inst sopc_anemometre.CPU.clock_bridge -pg 1
+preplace netloc EXPORT<net_container>sopc_anemometre</net_container>(SLAVE)BOUTONS.external_connection,(SLAVE)sopc_anemometre.boutons_external_connection) 1 0 3 NJ 400 NJ 330 NJ
+preplace netloc INTERCONNECT<net_container>sopc_anemometre</net_container>(SLAVE)SYST_ID.reset,(SLAVE)avalon_pwm_0.reset,(SLAVE)clk_0.clk_in_reset,(SLAVE)avalon_anemo_0.reset,(SLAVE)RAM.reset1,(MASTER)clk_0.clk_reset,(SLAVE)CPU.reset,(SLAVE)BOUTONS.reset,(SLAVE)LEDS.reset,(SLAVE)JTAG_UART.reset,(MASTER)CPU.debug_reset_request) 1 0 3 230 380 630 310 950
+preplace netloc EXPORT<net_container>sopc_anemometre</net_container>(SLAVE)sopc_anemometre.avalon_anemo_0_conduit_end,(SLAVE)avalon_anemo_0.conduit_end) 1 0 3 NJ 640 NJ 640 NJ
+preplace netloc FAN_OUT<net_container>sopc_anemometre</net_container>(SLAVE)BOUTONS.clk,(SLAVE)JTAG_UART.clk,(SLAVE)CPU.clk,(SLAVE)LEDS.clk,(SLAVE)avalon_anemo_0.clock,(MASTER)clk_0.clk,(SLAVE)avalon_pwm_0.clock,(SLAVE)RAM.clk1,(SLAVE)SYST_ID.clk) 1 0 3 210 250 NJ 230 910
+preplace netloc EXPORT<net_container>sopc_anemometre</net_container>(SLAVE)LEDS.external_connection,(SLAVE)sopc_anemometre.leds_external_connection) 1 0 3 NJ 420 NJ 420 NJ
+preplace netloc POINT_TO_POINT<net_container>sopc_anemometre</net_container>(SLAVE)JTAG_UART.irq,(MASTER)CPU.irq) 1 1 2 NJ 180 890
+preplace netloc INTERCONNECT<net_container>sopc_anemometre</net_container>(MASTER)CPU.instruction_master,(SLAVE)SYST_ID.control_slave,(SLAVE)LEDS.s1,(SLAVE)BOUTONS.s1,(SLAVE)avalon_anemo_0.avalon_slave,(SLAVE)CPU.debug_mem_slave,(SLAVE)JTAG_UART.avalon_jtag_slave,(MASTER)CPU.data_master,(SLAVE)RAM.s1,(SLAVE)avalon_pwm_0.avalon_slave_0) 1 0 3 250 230 610 200 930
+preplace netloc EXPORT<net_container>sopc_anemometre</net_container>(SLAVE)clk_0.clk_in,(SLAVE)sopc_anemometre.clk) 1 0 2 NJ 360 NJ
+preplace netloc EXPORT<net_container>sopc_anemometre</net_container>(SLAVE)sopc_anemometre.avalon_pwm_0_conduit_end,(SLAVE)avalon_pwm_0.conduit_end) 1 0 3 NJ 540 NJ 540 NJ
+levelinfo -pg 1 0 180 1160
+levelinfo -hier sopc_anemometre 190 370 720 1000 1150

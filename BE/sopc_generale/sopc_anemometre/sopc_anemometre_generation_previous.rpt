@@ -1,0 +1,128 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\myhaj\OneDrive\Bureau\sopc_generale\sopc_anemometre.qsys --block-symbol-file --output-directory=C:\Users\myhaj\OneDrive\Bureau\sopc_generale\sopc_anemometre --family="Cyclone IV E" --part=EP4CE22F17C6
+Progress: Loading sopc_generale/sopc_anemometre.qsys
+Progress: Reading input file
+Progress: Adding BOUTONS [altera_avalon_pio 18.1]
+Progress: Parameterizing module BOUTONS
+Progress: Adding CPU [altera_nios2_gen2 18.1]
+Progress: Parameterizing module CPU
+Progress: Adding JTAG_UART [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module JTAG_UART
+Progress: Adding LEDS [altera_avalon_pio 18.1]
+Progress: Parameterizing module LEDS
+Progress: Adding RAM [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module RAM
+Progress: Adding SYST_ID [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module SYST_ID
+Progress: Adding avalon_anemo_0 [avalon_anemo 1.0]
+Progress: Parameterizing module avalon_anemo_0
+Progress: Adding avalon_pwm_0 [avalon_pwm 1.0]
+Progress: Parameterizing module avalon_pwm_0
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: sopc_anemometre.BOUTONS: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: sopc_anemometre.JTAG_UART: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: sopc_anemometre.SYST_ID: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: sopc_anemometre.SYST_ID: Time stamp will be automatically updated when this component is generated.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\myhaj\OneDrive\Bureau\sopc_generale\sopc_anemometre.qsys --synthesis=VHDL --output-directory=C:\Users\myhaj\OneDrive\Bureau\sopc_generale\sopc_anemometre\synthesis --family="Cyclone IV E" --part=EP4CE22F17C6
+Progress: Loading sopc_generale/sopc_anemometre.qsys
+Progress: Reading input file
+Progress: Adding BOUTONS [altera_avalon_pio 18.1]
+Progress: Parameterizing module BOUTONS
+Progress: Adding CPU [altera_nios2_gen2 18.1]
+Progress: Parameterizing module CPU
+Progress: Adding JTAG_UART [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module JTAG_UART
+Progress: Adding LEDS [altera_avalon_pio 18.1]
+Progress: Parameterizing module LEDS
+Progress: Adding RAM [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module RAM
+Progress: Adding SYST_ID [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module SYST_ID
+Progress: Adding avalon_anemo_0 [avalon_anemo 1.0]
+Progress: Parameterizing module avalon_anemo_0
+Progress: Adding avalon_pwm_0 [avalon_pwm 1.0]
+Progress: Parameterizing module avalon_pwm_0
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: sopc_anemometre.BOUTONS: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: sopc_anemometre.JTAG_UART: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: sopc_anemometre.SYST_ID: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: sopc_anemometre.SYST_ID: Time stamp will be automatically updated when this component is generated.
+Info: sopc_anemometre: Generating sopc_anemometre "sopc_anemometre" for QUARTUS_SYNTH
+Info: BOUTONS: Starting RTL generation for module 'sopc_anemometre_BOUTONS'
+Info: BOUTONS:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sopc_anemometre_BOUTONS --dir=C:/Users/myhaj/AppData/Local/Temp/alt9698_8022973920224920601.dir/0002_BOUTONS_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/myhaj/AppData/Local/Temp/alt9698_8022973920224920601.dir/0002_BOUTONS_gen//sopc_anemometre_BOUTONS_component_configuration.pl  --do_build_sim=0  ]
+Info: BOUTONS: Done RTL generation for module 'sopc_anemometre_BOUTONS'
+Info: BOUTONS: "sopc_anemometre" instantiated altera_avalon_pio "BOUTONS"
+Info: CPU: "sopc_anemometre" instantiated altera_nios2_gen2 "CPU"
+Info: JTAG_UART: Starting RTL generation for module 'sopc_anemometre_JTAG_UART'
+Info: JTAG_UART:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=sopc_anemometre_JTAG_UART --dir=C:/Users/myhaj/AppData/Local/Temp/alt9698_8022973920224920601.dir/0003_JTAG_UART_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/myhaj/AppData/Local/Temp/alt9698_8022973920224920601.dir/0003_JTAG_UART_gen//sopc_anemometre_JTAG_UART_component_configuration.pl  --do_build_sim=0  ]
+Info: JTAG_UART: Done RTL generation for module 'sopc_anemometre_JTAG_UART'
+Info: JTAG_UART: "sopc_anemometre" instantiated altera_avalon_jtag_uart "JTAG_UART"
+Info: LEDS: Starting RTL generation for module 'sopc_anemometre_LEDS'
+Info: LEDS:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sopc_anemometre_LEDS --dir=C:/Users/myhaj/AppData/Local/Temp/alt9698_8022973920224920601.dir/0004_LEDS_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/myhaj/AppData/Local/Temp/alt9698_8022973920224920601.dir/0004_LEDS_gen//sopc_anemometre_LEDS_component_configuration.pl  --do_build_sim=0  ]
+Info: LEDS: Done RTL generation for module 'sopc_anemometre_LEDS'
+Info: LEDS: "sopc_anemometre" instantiated altera_avalon_pio "LEDS"
+Info: RAM: Starting RTL generation for module 'sopc_anemometre_RAM'
+Info: RAM:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=sopc_anemometre_RAM --dir=C:/Users/myhaj/AppData/Local/Temp/alt9698_8022973920224920601.dir/0005_RAM_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/myhaj/AppData/Local/Temp/alt9698_8022973920224920601.dir/0005_RAM_gen//sopc_anemometre_RAM_component_configuration.pl  --do_build_sim=0  ]
+Info: RAM: Done RTL generation for module 'sopc_anemometre_RAM'
+Info: RAM: "sopc_anemometre" instantiated altera_avalon_onchip_memory2 "RAM"
+Info: SYST_ID: "sopc_anemometre" instantiated altera_avalon_sysid_qsys "SYST_ID"
+Info: avalon_anemo_0: "sopc_anemometre" instantiated avalon_anemo "avalon_anemo_0"
+Info: avalon_pwm_0: "sopc_anemometre" instantiated avalon_pwm "avalon_pwm_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "sopc_anemometre" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "sopc_anemometre" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "sopc_anemometre" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'sopc_anemometre_CPU_cpu'
+Info: cpu:   Generation command is [exec D:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I D:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=sopc_anemometre_CPU_cpu --dir=C:/Users/myhaj/AppData/Local/Temp/alt9698_8022973920224920601.dir/0011_cpu_gen/ --quartus_bindir=D:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/myhaj/AppData/Local/Temp/alt9698_8022973920224920601.dir/0011_cpu_gen//sopc_anemometre_CPU_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.12.07 16:42:21 (*) Starting Nios II generation
+Info: cpu: # 2023.12.07 16:42:21 (*)   Checking for plaintext license.
+Info: cpu: # 2023.12.07 16:42:22 (*)   Couldn't query license setup in Quartus directory D:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2023.12.07 16:42:22 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2023.12.07 16:42:22 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2023.12.07 16:42:22 (*)   Plaintext license not found.
+Info: cpu: # 2023.12.07 16:42:22 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2023.12.07 16:42:22 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.12.07 16:42:22 (*)   Creating all objects for CPU
+Info: cpu: # 2023.12.07 16:42:24 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.12.07 16:42:24 (*)   Creating plain-text RTL
+Info: cpu: # 2023.12.07 16:42:25 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'sopc_anemometre_CPU_cpu'
+Info: cpu: "CPU" instantiated altera_nios2_gen2_unit "cpu"
+Info: CPU_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "CPU_data_master_translator"
+Info: JTAG_UART_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "JTAG_UART_avalon_jtag_slave_translator"
+Info: CPU_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "CPU_data_master_agent"
+Info: JTAG_UART_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "JTAG_UART_avalon_jtag_slave_agent"
+Info: JTAG_UART_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "JTAG_UART_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Users/myhaj/OneDrive/Bureau/sopc_generale/sopc_anemometre/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: sopc_anemometre: Done "sopc_anemometre" with 26 modules, 39 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

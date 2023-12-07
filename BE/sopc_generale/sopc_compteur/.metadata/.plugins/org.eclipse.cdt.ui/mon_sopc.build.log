@@ -1,0 +1,9 @@
+08:27:38 **** Incremental Build of configuration Nios II for project mon_sopc ****
+make all 
+Info: Building ../mon_sopc_bsp/
+D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../mon_sopc_bsp/
+[BSP build complete]
+[mon_sopc build complete]
+
+08:27:40 Build Finished (took 1s.741ms)
+

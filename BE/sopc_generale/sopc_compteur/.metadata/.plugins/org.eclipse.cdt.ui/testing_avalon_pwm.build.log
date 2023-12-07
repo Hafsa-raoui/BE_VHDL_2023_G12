@@ -1,0 +1,9 @@
+11:13:13 **** Incremental Build of configuration Nios II for project testing_avalon_pwm ****
+make all 
+Info: Building ../testing_avalon_pwm_bsp/
+E:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../testing_avalon_pwm_bsp/
+[BSP build complete]
+[testing_avalon_pwm build complete]
+
+11:13:16 Build Finished (took 3s.336ms)
+
