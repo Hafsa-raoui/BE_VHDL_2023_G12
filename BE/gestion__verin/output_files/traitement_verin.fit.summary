@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Dec 15 11:49:24 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : traitement_verin
+Top-level Entity Name : traitement_verin
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 925 / 22,320 ( 4 % )
+    Total combinational functions : 650 / 22,320 ( 3 % )
+    Dedicated logic registers : 680 / 22,320 ( 3 % )
+Total registers : 680
+Total pins : 10 / 154 ( 6 % )
+Total virtual pins : 0
+Total memory bits : 24,576 / 608,256 ( 4 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

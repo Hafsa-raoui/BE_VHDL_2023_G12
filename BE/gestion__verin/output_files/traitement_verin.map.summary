@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Dec 15 11:49:11 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : traitement_verin
+Top-level Entity Name : traitement_verin
+Family : Cyclone IV E
+Total logic elements : 935
+    Total combinational functions : 648
+    Dedicated logic registers : 680
+Total registers : 680
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 24,576
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
